@@ -1,0 +1,32 @@
+{
+	"expo": {
+		"name": "AMCAR2023",
+		"slug": "AMCAR2023",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"userInterfaceStyle": "dark",
+		"splash": {
+			"image": "./assets/images/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#000000"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.amcar.jn30"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/adaptive-icon.png",
+				"backgroundColor": "#000000"
+			},
+			"package": "com.amcar.jn30"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "8a369637-94cf-4054-986e-f7e70db0d4c8"
+			}
+		}
+	}
+}

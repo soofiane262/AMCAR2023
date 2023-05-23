@@ -1,0 +1,1475 @@
+[
+	[
+		{
+			"id": 1,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "14:00",
+			"endTime": "15:00",
+			"color": "purple",
+			"title": "Inscription au congrès",
+			"icon": "create"
+		},
+		{
+			"id": 2,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "red",
+			"title": "Ateliers Pratiques",
+			"icon": "bar-chart"
+		},
+		{
+			"id": 3,
+			"date": "2023-05-02",
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "blue",
+			"title": "Salle 1 • Comment utiliser le Strain au quotidien ?",
+			"speakers": [
+				{
+					"name": "I. Asfalou",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"date": "2023-05-02",
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "blue",
+			"title": "Salle 2 • Écho Doppler artériel des membres inférieurs",
+			"speakers": [
+				{
+					"name": "S. Kownator",
+					"city": "Thionville"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"date": "2023-05-02",
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "blue",
+			"title": "Salle 3 • Cas cliniques de cardiologie interventionelle : Tavi, fermeture auricule G, fermeture FOP",
+			"speakers": [
+				{
+					"name": "Ch. Caussin",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"date": "2023-05-02",
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "blue",
+			"title": "Salle 4 • Atelier veines des MI",
+			"speakers": [
+				{
+					"name": "O. Pichot",
+					"city": "Grenoble"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"date": "2023-05-02",
+			"startTime": "15:00",
+			"endTime": "16:30",
+			"color": "blue",
+			"title": "Salle Plénière • Echo des valvulopathies : Situations difficiles",
+			"speakers": [
+				{
+					"name": "Ch. Diakov",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "16:30",
+			"endTime": "17:00",
+			"color": "purple",
+			"title": "Pause-Café • Visite des stands",
+			"icon": "cafe"
+		},
+		{
+			"id": 9,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "17:00",
+			"endTime": "17:15",
+			"color": "blue",
+			"title": "Mot de bienvenue",
+			"icon": "chatbox-ellipses",
+			"speakers": [
+				{
+					"name": "S. Chraibi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "A. Moustaghfir",
+					"city": "Casablanca"
+				},
+				{
+					"name": "M. El Hattaoui",
+					"city": "Marrakech"
+				},
+				{
+					"name": "A. Salem",
+					"city": "Tunis"
+				},
+				{
+					"name": "A. Kane",
+					"city": "Dakar"
+				},
+				{
+					"name": "Kh. Boye",
+					"city": "Nouakchott"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"date": "2023-05-02",
+			"startTime": "17:15",
+			"endTime": "18:30",
+			"color": "green",
+			"title": "Session Cardiologie Structurelle",
+			"moderators": [
+				{
+					"name": "M. Cherti",
+					"city": "Rabat"
+				},
+				{
+					"name": "H. Belghiti",
+					"city": "Rabat"
+				},
+				{
+					"name": "Y. Ettoumi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "R. Belghiti",
+					"city": "Agadir"
+				}
+			]
+		},
+		{
+			"id": 11,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "17:15",
+			"endTime": "17:30",
+			"color": "blue",
+			"title": "L'Échocardigraphie interventionelle des valves",
+			"speakers": [
+				{
+					"name": "J. Dreyfus",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 12,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "17:30",
+			"endTime": "17:45",
+			"color": "blue",
+			"title": "Le parcours du patient candidat à un TAVI",
+			"speakers": [
+				{
+					"name": "I. Ismail",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 13,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "17:45",
+			"endTime": "18:00",
+			"color": "blue",
+			"title": "Fermeture percutanée des FOP : Pour qui ?",
+			"speakers": [
+				{
+					"name": "Ch. Caussin",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 14,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "18:00",
+			"endTime": "18:15",
+			"color": "blue",
+			"title": "Traitement interventionnel des IT secondaires : Remplacer ou réparer ?",
+			"speakers": [
+				{
+					"name": "J. Dreyfus",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 15,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "18:15",
+			"endTime": "18:30",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 17,
+			"date": "2023-05-02",
+			"time": true,
+			"startTime": "19:00",
+			"endTime": "19:45",
+			"color": "green",
+			"title": "La Conférence de l'Année : Le triomphe de l'intelligence humaine",
+			"image": "https://sel-mars.com/amcar/images/i_aberkane.png",
+			"speakers": [
+				{
+					"name": "I. Aberkane",
+					"city": "Paris"
+				}
+			],
+			"moderators": [
+				{
+					"name": "S. Chraibi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "M. M. Alaoui",
+					"city": "Casablanca"
+				}
+			]
+		}
+	],
+	[
+		{
+			"id": 18,
+			"date": "2023-05-03",
+			"startTime": "08:30",
+			"endTime": "10:00",
+			"color": "green",
+			"title": "Session Cardiomyopathies",
+			"moderators": [
+				{
+					"name": "L. Azzouzi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "H. Benjelloune",
+					"city": "Rabat"
+				},
+				{
+					"name": "S. Abir",
+					"city": "Rabat"
+				},
+				{
+					"name": "S. Soulami",
+					"city": "Casablanca"
+				},
+				{
+					"name": "Z. Raissouni",
+					"city": "Tanger"
+				}
+			]
+		},
+		{
+			"id": 19,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "08:30",
+			"endTime": "08:45",
+			"color": "blue",
+			"title": "Évaluation de la cardiotoxicité myocardique au cours de la chimiothérapie",
+			"speakers": [
+				{
+					"name": "Ch. Diakov",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 20,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "08:45",
+			"endTime": "08:50",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 21,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "08:50",
+			"endTime": "09:05",
+			"color": "blue",
+			"title": "L'IRM dans les myocardiopathies",
+			"speakers": [
+				{
+					"name": "N. Doghmi",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 22,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "09:05",
+			"endTime": "09:10",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 23,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "09:10",
+			"endTime": "09:25",
+			"color": "blue",
+			"title": "CMH : Diagnostic étiologique et pronostic ?",
+			"speakers": [
+				{
+					"name": "M. C. Malergue",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 24,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "09:25",
+			"endTime": "09:30",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 25,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "09:30",
+			"endTime": "09:45",
+			"color": "blue",
+			"title": "Traitement médical de l'amylose cardiaque : Où en est-on ?",
+			"speakers": [
+				{
+					"name": "T. Damy",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 26,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "09:45",
+			"endTime": "09:50",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 27,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "10:00",
+			"endTime": "10:30",
+			"color": "red",
+			"title": "Le role de l'ivabradine dans la prise en charge initiale du patient en insuffisance cardiaque",
+			"speakers": [
+				{
+					"name": "Z. Raissouni",
+					"city": "Tanger"
+				}
+			],
+			"laboratory": "Servier",
+			"image": "https://sel-mars.com/amcar/images/sponsors/servier.png"
+		},
+		{
+			"id": 28,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "10:30",
+			"endTime": "11:00",
+			"color": "purple",
+			"title": "Pause-Café • Visite des stands",
+			"icon": "cafe"
+		},
+		{
+			"id": 29,
+			"date": "2023-05-03",
+			"startTime": "11:00",
+			"endTime": "12:30",
+			"color": "green",
+			"title": "Session Cardiologie Pédiatrique",
+			"moderators": [
+				{
+					"name": "S. Fadouach",
+					"city": "Marrakech"
+				},
+				{
+					"name": "S. Zaïmi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "R. Amri",
+					"city": "Rabat"
+				},
+				{
+					"name": "M. El Kouache",
+					"city": "Fes"
+				}
+			]
+		},
+		{
+			"id": 30,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "11:00",
+			"endTime": "11:20",
+			"color": "blue",
+			"title": "Traitements des rétrecissements aortiques congénitaux",
+			"speakers": [
+				{
+					"name": "Y. Chikhaoui",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 31,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "11:20",
+			"endTime": "11:25",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 32,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "11:25",
+			"endTime": "11:50",
+			"color": "blue",
+			"title": "Quoi de neuf dans l'imagerie des cardiopathies congénitales ?",
+			"speakers": [
+				{
+					"name": "D. Bonnet",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 33,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "11:50",
+			"endTime": "11:55",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 34,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "11:55",
+			"endTime": "12:20",
+			"color": "blue",
+			"title": "Quel ventricule unique opérer ? Quand et comment ?",
+			"speakers": [
+				{
+					"name": "F. Roubertie",
+					"city": "Bordeaux"
+				}
+			]
+		},
+		{
+			"id": 35,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "12:20",
+			"endTime": "12:25",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 36,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "12:30",
+			"endTime": "13:00",
+			"color": "red",
+			"title": "Nouvelles recommandations 2023 : Quelle prise en charge pour le patient DT2 à haut risque CV",
+			"speakers": [
+				{
+					"name": "P. Valensi",
+					"city": "Paris"
+				}
+			],
+			"laboratory": "Novo Nordisk",
+			"image": "https://sel-mars.com/amcar/images/sponsors/novo_nordisk.png"
+		},
+		{
+			"id": 37,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "purple",
+			"title": "Pause Déjeuner",
+			"icon": "fast-food"
+		},
+		{
+			"id": 38,
+			"date": "2023-05-03",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "red",
+			"title": "Ateliers Pratiques",
+			"icon": "bar-chart"
+		},
+		{
+			"id": 39,
+			"date": "2023-05-03",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 1 • Atelier Strain sur Echo Pack",
+			"speakers": [
+				{
+					"name": "E. Donal",
+					"city": "Rennes"
+				}
+			]
+		},
+		{
+			"id": 40,
+			"date": "2023-05-03",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 2 • Cas cliniques cardiologie pédiatrique",
+			"speakers": [
+				{
+					"name": "D. Bonnet",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 41,
+			"date": "2023-05-03",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 3 • Lecture de coronarographies",
+			"speakers": [
+				{
+					"name": "Gh. Bennouna",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 42,
+			"date": "2023-05-03",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 4 • Coeur & Rein : A propos de cas cliniques",
+			"speakers": [
+				{
+					"name": "D. Guerrot",
+					"city": "Rouen"
+				}
+			]
+		},
+		{
+			"id": 43,
+			"date": "2023-05-03",
+			"startTime": "14:30",
+			"endTime": "16:00",
+			"color": "green",
+			"title": "Session Coronaires",
+			"moderators": [
+				{
+					"name": "S. Ztot",
+					"city": "Rabat"
+				},
+				{
+					"name": "A. Bouzerda",
+					"city": "Marakech"
+				},
+				{
+					"name": "N. Ouafi",
+					"city": "Oujda"
+				},
+				{
+					"name": "Z. Lakhal",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 44,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "14:30",
+			"endTime": "14:45",
+			"color": "blue",
+			"title": "Place actuelle du coro scanner et de l'AngioIRM dans la gestion de la maladie coronaire",
+			"speakers": [
+				{
+					"name": "B. Alos",
+					"city": "Poitiers"
+				}
+			]
+		},
+		{
+			"id": 45,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "14:45",
+			"endTime": "15:00",
+			"color": "blue",
+			"title": "Lésions coronaires et TAVI",
+			"speakers": [
+				{
+					"name": "M. Beaufigeau",
+					"city": "Perpignan"
+				}
+			]
+		},
+		{
+			"id": 46,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "15:00",
+			"endTime": "15:15",
+			"color": "blue",
+			"title": "Comment traiter les lésions de bifurcations et les lésions calcifiées ?",
+			"speakers": [
+				{
+					"name": "K. Boughalem",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 47,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "15:15",
+			"endTime": "15:30",
+			"color": "blue",
+			"title": "Comment aborder la revascularisation d'une dysfonction ischémique du VG ?",
+			"speakers": [
+				{
+					"name": "N. Meneveau",
+					"city": "Besançon"
+				}
+			]
+		},
+		{
+			"id": 48,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "15:30",
+			"endTime": "16:00",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 49,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "16:00",
+			"endTime": "16:30",
+			"color": "red",
+			"title": "Lisinopril et protection cardio-rénale chez l'hypertendu : effet classe ou propre ?",
+			"speakers": [
+				{
+					"name": "L. Bendriss",
+					"city": "Marrakech"
+				}
+			],
+			"laboratory": "Atlas Pharm • Tecnimede",
+			"image": "https://sel-mars.com/amcar/images/sponsors/atlas_pharm.png"
+		},
+		{
+			"id": 50,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "16:30",
+			"endTime": "17:00",
+			"color": "purple",
+			"title": "Pause-Café • Visite des stands",
+			"icon": "cafe"
+		},
+		{
+			"id": 51,
+			"date": "2023-05-03",
+			"startTime": "17:00",
+			"endTime": "18:30",
+			"color": "green",
+			"title": "Session Valvulopathies",
+			"moderators": [
+				{
+					"name": "L. Bendriss",
+					"city": "Marrakech"
+				},
+				{
+					"name": "Kh. Boye",
+					"city": "Nouakchott"
+				},
+				{
+					"name": "S. Moughil",
+					"city": "Rabat"
+				},
+				{
+					"name": "M. Nazi",
+					"city": "Meknès"
+				}
+			]
+		},
+		{
+			"id": 52,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:00",
+			"endTime": "17:15",
+			"color": "blue",
+			"title": "Les pièges à éviter lors de l'évaluation d'une poly valvulopathie ?",
+			"speakers": [
+				{
+					"name": "T. Letourneau",
+					"city": "Nantes"
+				}
+			]
+		},
+		{
+			"id": 53,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:15",
+			"endTime": "17:20",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 54,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:20",
+			"endTime": "17:35",
+			"color": "blue",
+			"title": "Sténose aortique à haut gradient paradoxal : modérée ou sévère ?",
+			"speakers": [
+				{
+					"name": "Ph. Unger",
+					"city": "Bruxelles"
+				}
+			]
+		},
+		{
+			"id": 55,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:35",
+			"endTime": "17:40",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 56,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:40",
+			"endTime": "17:55",
+			"color": "blue",
+			"title": "Évaluation des fuites aortiques",
+			"speakers": [
+				{
+					"name": "Ch. Tribouilloy",
+					"city": "Amiens"
+				}
+			]
+		},
+		{
+			"id": 57,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "17:55",
+			"endTime": "18:00",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 58,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "18:00",
+			"endTime": "18:15",
+			"color": "blue",
+			"title": "Comment opérer les fuites aortiques sevères ? Réparer ou remplacer ?",
+			"speakers": [
+				{
+					"name": "G. El Khoury",
+					"city": "Bruxelles"
+				}
+			]
+		},
+		{
+			"id": 59,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "18:15",
+			"endTime": "18:20",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 60,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "18:30",
+			"endTime": "19:00",
+			"color": "red",
+			"title": "Optimisation du traitement de l'insuffisance cardiaque en pratique",
+			"speakers": [
+				{
+					"name": "M. El Hattaoui",
+					"city": "Marrakech"
+				}
+			],
+			"laboratory": "Boehringer Ingelheim",
+			"image": "https://sel-mars.com/amcar/images/sponsors/boehringer.png"
+		},
+		{
+			"id": 61,
+			"date": "2023-05-03",
+			"time": true,
+			"startTime": "20:30",
+			"endTime": "23:58",
+			"color": "purple",
+			"title": "Dîner",
+			"icon": "fast-food"
+		}
+	],
+	[
+		{
+			"id": 62,
+			"date": "2023-05-04",
+			"startTime": "08:30",
+			"endTime": "10:00",
+			"color": "green",
+			"title": "Session à thèmes",
+			"moderators": [
+				{
+					"name": "A. Salem",
+					"city": "Tunis"
+				},
+				{
+					"name": "Kh. Yaqini",
+					"city": "Casablanca"
+				},
+				{
+					"name": "N. Chraïbi",
+					"city": "Casablanca"
+				},
+				{
+					"name": "N. Mouine",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 63,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "08:30",
+			"endTime": "08:45",
+			"color": "blue",
+			"title": "AOD et situations difficiles",
+			"speakers": [
+				{
+					"name": "M. Alami",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 64,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "08:45",
+			"endTime": "08:50",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 65,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "08:50",
+			"endTime": "09:05",
+			"color": "blue",
+			"title": "Traitement médical des sténoses carotidiennes asymptomatiques",
+			"speakers": [
+				{
+					"name": "S. Kownator",
+					"city": "Thionville"
+				}
+			]
+		},
+		{
+			"id": 66,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "09:05",
+			"endTime": "09:10",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 67,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "09:10",
+			"endTime": "09:25",
+			"color": "blue",
+			"title": "Gestion du traitement anti-thrombotique en périopératoire",
+			"speakers": [
+				{
+					"name": "A. Bensouda",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 68,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "09:25",
+			"endTime": "09:30",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 69,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "09:30",
+			"endTime": "09:45",
+			"color": "blue",
+			"title": "Est-il possible de faire régresser une plaque d'athérome ?",
+			"speakers": [
+				{
+					"name": "A. Pathak",
+					"city": "Monaco"
+				}
+			]
+		},
+		{
+			"id": 70,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "09:45",
+			"endTime": "09:50",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 71,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "10:00",
+			"endTime": "10:30",
+			"color": "red",
+			"title": "Nouvelles recommandations de l'Insuffisance Cardiaque... Comment surpasser l'inertie ?",
+			"speakers": [
+				{
+					"name": "A. Bennis",
+					"city": "Casablanca"
+				}
+			],
+			"laboratory": "Astra Zeneca",
+			"image": "https://sel-mars.com/amcar/images/sponsors/astra_zeneca.png"
+		},
+		{
+			"id": 72,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "10:30",
+			"endTime": "11:00",
+			"color": "purple",
+			"title": "Pause-Café • Visite des stands",
+			"icon": "cafe"
+		},
+		{
+			"id": 73,
+			"date": "2023-05-04",
+			"startTime": "11:00",
+			"endTime": "12:30",
+			"color": "green",
+			"title": "Session Rythmologie",
+			"moderators": [
+				{
+					"name": "S. Abdellali",
+					"city": "Rabat"
+				},
+				{
+					"name": "A. Kane",
+					"city": "Dakar"
+				},
+				{
+					"name": "A. Chaib",
+					"city": "Rabat"
+				},
+				{
+					"name": "A. Tahiri",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 74,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "11:00",
+			"endTime": "11:15",
+			"color": "blue",
+			"title": "L'hypertonie vagale du sujet jeune : Est ce vraiment une maladie ?",
+			"speakers": [
+				{
+					"name": "A. Moustaghfir",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 75,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "11:15",
+
+			"endTime": "11:30",
+			"color": "blue",
+
+			"title": "Prise en charge des syndromes du QT long",
+			"speakers": [
+				{
+					"name": "I. Bensahi",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 76,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "11:30",
+
+			"endTime": "11:45",
+			"color": "blue",
+			"title": "Prise en charge des troubles du rythme après IDM",
+			"speakers": [
+				{
+					"name": "I. El Hajjaji",
+					"city": "Fes"
+				}
+			]
+		},
+		{
+			"id": 77,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "11:45",
+			"endTime": "12:00",
+			"color": "blue",
+			"title": "Brady arythmies : Les indications de la stimulation cardiaque",
+			"speakers": [
+				{
+					"name": "G. Latcu",
+					"city": "Monaco"
+				}
+			]
+		},
+		{
+			"id": 78,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "12:00",
+			"endTime": "12:30",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 79,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "12:30",
+			"endTime": "13:00",
+			"color": "red",
+			"title": "Histoire de la vie d'un hypertendu avec un ARAII",
+			"speakers": [
+				{
+					"name": "A. Pathak",
+					"city": "Monaco"
+				}
+			],
+			"laboratory": "Phi by Kelix Bio",
+			"image": "https://sel-mars.com/amcar/images/sponsors/phi.png"
+		},
+		{
+			"id": 80,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "purple",
+			"title": "Pause Déjeuner",
+			"icon": "fast-food"
+		},
+		{
+			"id": 81,
+			"date": "2023-05-04",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "red",
+			"title": "Ateliers Pratiques",
+			"icon": "bar-chart"
+		},
+		{
+			"id": 82,
+			"date": "2023-05-04",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 1 • Quiz ECG",
+			"speakers": [
+				{
+					"name": "A. Moustaghfir",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 83,
+			"date": "2023-05-04",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 2 • Le cathétérisme droit",
+			"speakers": [
+				{
+					"name": "M. Z. Jalal",
+					"city": "Bordeaux"
+				}
+			]
+		},
+		{
+			"id": 84,
+			"date": "2023-05-04",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 3 • L'ETO en pratique",
+			"speakers": [
+				{
+					"name": "M. El Hattaoui",
+					"city": "Marrakech"
+				}
+			]
+		},
+		{
+			"id": 85,
+			"date": "2023-05-04",
+			"startTime": "13:00",
+			"endTime": "14:30",
+			"color": "blue",
+			"title": "Salle 4 • Echo Doppler artériel des TSA",
+			"speakers": [
+				{
+					"name": "J. C. Sadik",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 86,
+			"date": "2023-05-04",
+			"startTime": "14:30",
+			"endTime": "16:00",
+			"color": "green",
+			"title": "Session Insuffisance Cardiaque",
+			"moderators": [
+				{
+					"name": "R. Habbal",
+					"city": "Casablanca"
+				},
+				{
+					"name": "A. Soufiani",
+					"city": "Rabat"
+				},
+				{
+					"name": "N. Berrada",
+					"city": "Rabat"
+				},
+				{
+					"name": "A. Khatouri",
+					"city": "Marrakech"
+				}
+			]
+		},
+		{
+			"id": 87,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "14:30",
+			"endTime": "14:45",
+			"color": "blue",
+			"title": "Situations difficiles dans L'IC : Dialysé, hypotension, résistance au traitement…",
+			"speakers": [
+				{
+					"name": "D. Logeart",
+					"city": "Paris"
+				}
+			]
+		},
+		{
+			"id": 88,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "14:45",
+			"endTime": "15:00",
+			"color": "blue",
+			"title": "Les éléments du pronostic de l'insuffisance cardiaque",
+			"speakers": [
+				{
+					"name": "A. Bennis",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 89,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "15:00",
+			"endTime": "15:15",
+			"color": "blue",
+			"title": "Traitement médical de l'IC : Une avancée considérable",
+			"speakers": [
+				{
+					"name": "A. Benyass",
+					"city": "Rabat"
+				}
+			]
+		},
+		{
+			"id": 90,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "15:15",
+			"endTime": "15:30",
+			"color": "blue",
+			"title": "La resynchronisation dans l'IC : Mythe ou réalité ?",
+			"speakers": [
+				{
+					"name": "G. Latcu",
+					"city": "Monaco"
+				}
+			]
+		},
+		{
+			"id": 91,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "15:30",
+			"endTime": "16:00",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 92,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "16:00",
+			"endTime": "16:30",
+			"color": "red",
+			"title": "Rôle du Ticagrelor dans l'approche moderne du SCA",
+			"speakers": [
+				{
+					"name": "M. El Hattaoui",
+					"city": "Marrakech"
+				}
+			],
+			"laboratory": "Astra Zeneca",
+			"image": "https://sel-mars.com/amcar/images/sponsors/astra-zeneca.png"
+		},
+		{
+			"id": 93,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "16:30",
+			"endTime": "17:00",
+			"color": "purple",
+			"title": "Pause-Café • Visite des stands",
+			"icon": "cafe"
+		},
+		{
+			"id": 94,
+			"date": "2023-05-04",
+			"startTime": "17:00",
+			"endTime": "18:30",
+			"color": "green",
+			"title": "Le Débat des Journées: Le Coeur droit au centre de la polémique",
+			"moderators": [
+				{
+					"name": "L. Saher",
+					"city": "Casablanca"
+				},
+				{
+					"name": "A. Aouad",
+					"city": "Rabat"
+				},
+				{
+					"name": "M. C. Malergue",
+					"city": "Paris"
+				},
+				{
+					"name": "S. Chraibi",
+					"city": "Casablanca"
+				}
+			]
+		},
+		{
+			"id": 95,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "17:00",
+			"endTime": "17:15",
+			"color": "blue",
+			"title": "Evaluation de la fonction VD: Intérêt du couplage VD - AP",
+			"speakers": [
+				{
+					"name": "E. Abergel",
+					"city": "Bordeaux"
+				}
+			]
+		},
+		{
+			"id": 96,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "17:15",
+			"endTime": "17:30",
+			"color": "blue",
+			"title": "Evaluation de la valve tricuspide avant le Triclip",
+			"speakers": [
+				{
+					"name": "Ph. Unger",
+					"city": "Bruxelles"
+				}
+			]
+		},
+		{
+			"id": 97,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "17:30",
+			"endTime": "17:45",
+			"color": "blue",
+			"title": "L'imagerie 3D du VD",
+			"speakers": [
+				{
+					"name": "Ch. Selton-Suty",
+					"city": "Nancy"
+				}
+			]
+		},
+		{
+			"id": 98,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "17:45",
+			"endTime": "18:00",
+			"color": "blue",
+			"title": "De l'embolie pulmonaire à l'HTAP post embolique",
+			"speakers": [
+				{
+					"name": "N. Meneveau",
+					"city": "Besançon"
+				}
+			]
+		},
+		{
+			"id": 99,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "18:00",
+			"endTime": "18:30",
+			"color": "purple",
+			"icon": "chatbubbles",
+			"title": "Discussion"
+		},
+		{
+			"id": 100,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "18:45",
+			"endTime": "19:45",
+			"icon": "medal",
+			"color": "red",
+			"title": "Hommages et Remise des Prix"
+		},
+		{
+			"id": 101,
+			"date": "2023-05-04",
+			"time": true,
+			"startTime": "21:00",
+			"endTime": "23:58",
+			"color": "purple",
+			"title": "Dîner de clôture",
+			"icon": "fast-food"
+		}
+	]
+]
