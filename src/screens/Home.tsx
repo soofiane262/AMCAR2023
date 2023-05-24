@@ -8,21 +8,20 @@ import {
 	Easing,
 	ScrollView,
 } from "react-native";
-import moment from "moment";
-import LottieView from "lottie-react-native";
+// import moment from "moment";
+// import LottieView from "lottie-react-native";
 import { StatusBar } from "expo-status-bar";
+import * as StyledText from "../components/StyledText";
 
-import { HomeButtonData, HomeButtons } from "../constants/HomeButtons";
-import * as HomeScreenButtons from "../components/HomeScreenButtons";
+// import { HomeButtonData, HomeButtons } from "../constants/HomeButtons";
+// import * as HomeScreenButtons from "../components/HomeScreenButtons";
 import Colors from "../constants/Colors";
 
 import SplashScreen from "./Splash";
 
-const windowHeight = Dimensions.get("window").height;
-
 export default function HomeScreen() {
 	const [loaded, setLoaded] = useState(false);
-	const today = moment().format("YYYY-MM-DD");
+	// const today = moment().format("YYYY-MM-DD");
 	const animation = useRef(new Animated.Value(0)).current;
 
 	useEffect(() => {
@@ -34,23 +33,23 @@ export default function HomeScreen() {
 		}).start();
 	}, [animation]);
 
-	const renderButton = ({
-		item,
-		buttonSize,
-	}: {
-		item: HomeButtonData;
-		buttonSize?: "sm" | "md" | "lg" | "xl";
-	}) => {
-		const ButtonComponent =
-			buttonSize === "sm"
-				? HomeScreenButtons.Sm
-				: buttonSize === "md"
-				? HomeScreenButtons.Md
-				: buttonSize === "lg"
-				? HomeScreenButtons.Lg
-				: HomeScreenButtons.Xl;
-		return <ButtonComponent button={item} />;
-	};
+	// const renderButton = ({
+	// 	item,
+	// 	buttonSize,
+	// }: {
+	// 	item: HomeButtonData;
+	// 	buttonSize?: "sm" | "md" | "lg" | "xl";
+	// }) => {
+	// 	const ButtonComponent =
+	// 		buttonSize === "sm"
+	// 			? HomeScreenButtons.Sm
+	// 			: buttonSize === "md"
+	// 			? HomeScreenButtons.Md
+	// 			: buttonSize === "lg"
+	// 			? HomeScreenButtons.Lg
+	// 			: HomeScreenButtons.Xl;
+	// 	return <ButtonComponent button={item} />;
+	// };
 
 	if (!loaded)
 		return (
@@ -63,14 +62,15 @@ export default function HomeScreen() {
 			<>
 				<StatusBar style="light" />
 				{/* <LottieView
-				source={require("../../assets/animations/home.json")}
-				autoPlay
-				loop={false}
-				style={styles.animation}
-			/> */}
-				<SafeAreaView style={{ flex: 1 }}>
-					<View style={styles.container}>
-						<ScrollView
+					source={require("../../assets/animations/home.json")}
+					autoPlay
+					loop={false}
+					style={styles.animation}
+				/> */}
+				{/* <SafeAreaView style={{ flex: 1 }}> */}
+				<View style={[styles.container, { justifyContent: "center" }]}>
+					<StyledText.Bold>Hi</StyledText.Bold>
+					{/* <ScrollView
 							showsVerticalScrollIndicator={false}
 							style={{ flex: 1 }}
 						>
@@ -81,9 +81,9 @@ export default function HomeScreen() {
 									buttonSize: "md",
 								})}
 							</View>
-						</ScrollView>
-					</View>
-				</SafeAreaView>
+						</ScrollView> */}
+				</View>
+				{/* </SafeAreaView> */}
 			</>
 		);
 }
