@@ -5,7 +5,10 @@ export function Light(props: TextProps) {
 		<Text
 			{...props}
 			allowFontScaling={false}
-			style={[props.style, { fontFamily: "MontserratLight" }]}
+			style={[
+				props.style,
+				// { fontFamily: "MontserratLight" }
+			]}
 		/>
 	);
 }
@@ -15,7 +18,10 @@ export function Regular(props: TextProps) {
 		<Text
 			{...props}
 			allowFontScaling={false}
-			style={[props.style, { fontFamily: "MontserratRegular" }]}
+			style={[
+				props.style,
+				// { fontFamily: "MontserratRegular" }
+			]}
 		/>
 	);
 }
@@ -25,7 +31,10 @@ export function Medium(props: TextProps) {
 		<Text
 			{...props}
 			allowFontScaling={false}
-			style={[props.style, { fontFamily: "MontserratMedium" }]}
+			style={[
+				props.style,
+				// { fontFamily: "MontserratMedium" }
+			]}
 		/>
 	);
 }
@@ -35,7 +44,10 @@ export function SemiBold(props: TextProps) {
 		<Text
 			{...props}
 			allowFontScaling={false}
-			style={[props.style, { fontFamily: "MontserratSemiBold" }]}
+			style={[
+				props.style,
+				// { fontFamily: "MontserratSemiBold" }
+			]}
 		/>
 	);
 }
@@ -45,7 +57,10 @@ export function Bold(props: TextProps) {
 		<Text
 			{...props}
 			allowFontScaling={false}
-			style={[props.style, { fontFamily: "MontserratBold" }]}
+			style={[
+				props.style,
+				// { fontFamily: "MontserratBold" }
+			]}
 		/>
 	);
 }

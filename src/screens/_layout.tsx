@@ -22,9 +22,9 @@ export default function RootLayoutNav() {
 					headerStyle: {
 						backgroundColor: Colors.primary,
 					},
-					headerTitleStyle: {
-						fontFamily: "MontserratSemiBold",
-					},
+					// headerTitleStyle: {
+					// 	fontFamily: "MontserratSemiBold",
+					// },
 					headerTintColor: Colors.white,
 				}}
 			>
