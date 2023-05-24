@@ -1,7 +1,6 @@
 import HomeScreen from "./Home";
 import EnrollScreen from "./Enroll";
 import ProgramNew from "./ProgramNew";
-import MapScreen from "./Map";
 import ChairmanScreen from "./Chairman";
 import CommitteeScreen from "./Committee";
 import QuestionScreen from "./Question";
@@ -43,11 +42,6 @@ export default function RootLayoutNav() {
 					name="Program"
 					component={ProgramNew}
 					options={{ title: "Programme" }}
-				/>
-				<Stack.Screen
-					name="Map"
-					component={MapScreen}
-					options={{ title: "Plan Intéractif" }}
 				/>
 				<Stack.Screen
 					name="Chairman"

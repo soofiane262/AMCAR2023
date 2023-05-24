@@ -93,6 +93,6 @@ export const HomeButtons: HomeButtonData[] = [
 		id: "Question",
 		title: "Posez vos Questions",
 		icon: "question",
-		color: Colors.primary,
+		color: Colors.secondary,
 	},
 ];

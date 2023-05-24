@@ -8,7 +8,6 @@ import {
 	Easing,
 	ScrollView,
 } from "react-native";
-import { useNavigation } from "@react-navigation/core";
 import moment from "moment";
 import LottieView from "lottie-react-native";
 import { StatusBar } from "expo-status-bar";
@@ -67,31 +66,31 @@ export default function HomeScreen() {
 					>
 						<View style={{ height: 20 }} />
 						<View style={styles.center}>
-							{today < "2023-06-08"
-								? renderButton({
-										item: HomeButtons[0],
-										buttonSize: "xl",
-								  })
-								: renderButton({
-										item: HomeButtons[12],
-										buttonSize: "xl",
-								  })}
+							{renderButton({
+								item: HomeButtons[0],
+								buttonSize: "xl",
+							})}
+							{today >= "2023-06-08" &&
+								renderButton({
+									item: HomeButtons[12],
+									buttonSize: "xl",
+								})}
 							<View style={styles.row}>
 								{renderButton({
 									item: HomeButtons[1],
 									buttonSize: "lg",
 								})}
-								{renderButton({
+								{/* {renderButton({
 									item: HomeButtons[2],
 									buttonSize: "lg",
-								})}
+								})} */}
 							</View>
 							<View style={styles.row}>
 								{renderButton({
 									item: HomeButtons[3],
 									buttonSize: "md",
 								})}
-								<View>
+								{/* <View>
 									{renderButton({
 										item: HomeButtons[4],
 										buttonSize: "sm",
@@ -100,7 +99,7 @@ export default function HomeScreen() {
 										item: HomeButtons[5],
 										buttonSize: "sm",
 									})}
-								</View>
+								</View> */}
 							</View>
 							<View style={styles.row}>
 								<View>
@@ -108,10 +107,10 @@ export default function HomeScreen() {
 										item: HomeButtons[6],
 										buttonSize: "sm",
 									})}
-									{renderButton({
+									{/* {renderButton({
 										item: HomeButtons[7],
 										buttonSize: "sm",
-									})}
+									})} */}
 								</View>
 								{renderButton({
 									item: HomeButtons[8],
@@ -120,10 +119,10 @@ export default function HomeScreen() {
 							</View>
 						</View>
 						<View style={styles.row}>
-							{renderButton({
+							{/* {renderButton({
 								item: HomeButtons[9],
 								buttonSize: "md",
-							})}
+							})} */}
 							<View>
 								{renderButton({
 									item: HomeButtons[10],
