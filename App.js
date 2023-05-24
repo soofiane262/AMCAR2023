@@ -12,6 +12,10 @@ import Colors from "./src/constants/Colors";
 
 import HomeScreen from "./src/screens/Home";
 import ChairmanScreen from "./src/screens/Chairman";
+import EnrollScreen from "./src/screens/Enroll";
+import ProgramNew from "./src/screens/ProgramNew";
+import CommitteeScreen from "./src/screens/Committee";
+import QuestionScreen from "./src/screens/Question";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,9 +43,9 @@ export default function App() {
 					headerStyle: {
 						backgroundColor: Colors.primary,
 					},
-					// headerTitleStyle: {
-					// 	fontFamily: "MontserratSemiBold",
-					// },
+					headerTitleStyle: {
+						fontFamily: "MontserratSemiBold",
+					},
 					headerTintColor: Colors.white,
 				}}
 			>
@@ -51,13 +55,6 @@ export default function App() {
 					options={{ headerShown: false }}
 				/>
 				<Stack.Screen
-					name="Chairman"
-					component={ChairmanScreen}
-					options={{
-						title: "Mot de Bienvenue",
-					}}
-				/>
-				{/* <Stack.Screen
 					name="Enroll"
 					component={EnrollScreen}
 					options={{ title: "Inscription" }}
@@ -87,7 +84,7 @@ export default function App() {
 					options={{
 						title: "Posez vos questions",
 					}}
-				/> */}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 		// <>

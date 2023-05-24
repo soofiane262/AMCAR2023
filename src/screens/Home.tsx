@@ -3,25 +3,23 @@ import {
 	SafeAreaView,
 	View,
 	StyleSheet,
-	Dimensions,
 	Animated,
 	Easing,
 	ScrollView,
 } from "react-native";
-// import moment from "moment";
-// import LottieView from "lottie-react-native";
+import moment from "moment";
+import LottieView from "lottie-react-native";
 import { StatusBar } from "expo-status-bar";
-import * as StyledText from "../components/StyledText";
 
-// import { HomeButtonData, HomeButtons } from "../constants/HomeButtons";
-// import * as HomeScreenButtons from "../components/HomeScreenButtons";
+import { HomeButtonData, HomeButtons } from "../constants/HomeButtons";
+import * as HomeScreenButtons from "../components/HomeScreenButtons";
 import Colors from "../constants/Colors";
 
 import SplashScreen from "./Splash";
 
 export default function HomeScreen() {
 	const [loaded, setLoaded] = useState(false);
-	// const today = moment().format("YYYY-MM-DD");
+	const today = moment().format("YYYY-MM-DD");
 	const animation = useRef(new Animated.Value(0)).current;
 
 	useEffect(() => {
@@ -33,24 +31,23 @@ export default function HomeScreen() {
 		}).start();
 	}, [animation]);
 
-	// const renderButton = ({
-	// 	item,
-	// 	buttonSize,
-	// }: {
-	// 	item: HomeButtonData;
-	// 	buttonSize?: "sm" | "md" | "lg" | "xl";
-	// }) => {
-	// 	const ButtonComponent =
-	// 		buttonSize === "sm"
-	// 			? HomeScreenButtons.Sm
-	// 			: buttonSize === "md"
-	// 			? HomeScreenButtons.Md
-	// 			: buttonSize === "lg"
-	// 			? HomeScreenButtons.Lg
-	// 			: HomeScreenButtons.Xl;
-	// 	return <ButtonComponent button={item} />;
-	// };
-
+	const renderButton = ({
+		item,
+		buttonSize,
+	}: {
+		item: HomeButtonData;
+		buttonSize?: "sm" | "md" | "lg" | "xl";
+	}) => {
+		const ButtonComponent =
+			buttonSize === "sm"
+				? HomeScreenButtons.Sm
+				: buttonSize === "md"
+				? HomeScreenButtons.Md
+				: buttonSize === "lg"
+				? HomeScreenButtons.Lg
+				: HomeScreenButtons.Xl;
+		return <ButtonComponent button={item} />;
+	};
 	if (!loaded)
 		return (
 			<>
@@ -61,29 +58,91 @@ export default function HomeScreen() {
 		return (
 			<>
 				<StatusBar style="light" />
-				{/* <LottieView
+				<LottieView
 					source={require("../../assets/animations/home.json")}
 					autoPlay
 					loop={false}
 					style={styles.animation}
-				/> */}
-				{/* <SafeAreaView style={{ flex: 1 }}> */}
-				<View style={[styles.container, { justifyContent: "center" }]}>
-					<StyledText.Bold>Hi</StyledText.Bold>
-					{/* <ScrollView
+				/>
+				<SafeAreaView style={{ flex: 1 }}>
+					<View style={styles.container}>
+						<ScrollView
 							showsVerticalScrollIndicator={false}
 							style={{ flex: 1 }}
 						>
 							<View style={{ height: 20 }} />
+							<View style={styles.center}>
+								{renderButton({
+									item: HomeButtons[0],
+									buttonSize: "xl",
+								})}
+								{today >= "2023-06-08" &&
+									renderButton({
+										item: HomeButtons[12],
+										buttonSize: "xl",
+									})}
+								<View style={styles.row}>
+									{renderButton({
+										item: HomeButtons[1],
+										buttonSize: "lg",
+									})}
+									{renderButton({
+										item: HomeButtons[2],
+										buttonSize: "lg",
+									})}
+								</View>
+								<View style={styles.row}>
+									{renderButton({
+										item: HomeButtons[3],
+										buttonSize: "md",
+									})}
+									<View>
+										{renderButton({
+											item: HomeButtons[4],
+											buttonSize: "sm",
+										})}
+										{renderButton({
+											item: HomeButtons[5],
+											buttonSize: "sm",
+										})}
+									</View>
+								</View>
+								<View style={styles.row}>
+									<View>
+										{renderButton({
+											item: HomeButtons[6],
+											buttonSize: "sm",
+										})}
+										{renderButton({
+											item: HomeButtons[7],
+											buttonSize: "sm",
+										})}
+									</View>
+									{renderButton({
+										item: HomeButtons[8],
+										buttonSize: "md",
+									})}
+								</View>
+							</View>
 							<View style={styles.row}>
 								{renderButton({
-									item: HomeButtons[3],
+									item: HomeButtons[9],
 									buttonSize: "md",
 								})}
+								<View>
+									{renderButton({
+										item: HomeButtons[10],
+										buttonSize: "sm",
+									})}
+									{renderButton({
+										item: HomeButtons[11],
+										buttonSize: "sm",
+									})}
+								</View>
 							</View>
-						</ScrollView> */}
-				</View>
-				{/* </SafeAreaView> */}
+						</ScrollView>
+					</View>
+				</SafeAreaView>
 			</>
 		);
 }
