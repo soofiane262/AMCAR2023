@@ -1,10 +1,54 @@
-import { View, StyleSheet, FlatList, Image, Dimensions } from "react-native";
-import React, { useEffect } from "react";
+import {
+	View,
+	StyleSheet,
+	FlatList,
+	Image,
+	Dimensions,
+	TouchableOpacity,
+	Animated,
+	Modal,
+	Easing,
+} from "react-native";
+import React, { useEffect, useRef, useState } from "react";
 import * as StyledText from "./StyledText";
 import { ProgramData } from "../constants/ProgramNew";
 import Colors from "../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import moment from "moment-timezone";
+import * as Notifications from "expo-notifications";
+import LottieView from "lottie-react-native";
+
+const myScheduleNotification = async (
+	title: string,
+	body: string,
+	date: Date
+) => {
+	const existingNotifications =
+		await Notifications.getAllScheduledNotificationsAsync();
+
+	const isDuplicate = existingNotifications.some(
+		(notification) => notification.content.title === title
+	);
+
+	if (isDuplicate) {
+		console.log("Notification already scheduled with the same content.");
+		return;
+	}
+
+	console.log("Scheduling notification for", date, "with title", title);
+	const triggerDate: any = new Date(date);
+	const now: any = new Date();
+	const seconds = Math.floor((triggerDate - now) / 1000); // Calculate the number of seconds between current time and the specified date
+
+	await Notifications.scheduleNotificationAsync({
+		content: {
+			title: title,
+			body: body,
+			data: { data: "goes here" },
+		},
+		trigger: { seconds: seconds },
+	});
+};
 
 interface TimeProps {
 	time: string;
@@ -135,6 +179,7 @@ interface Props {
 }
 
 export default function ProgramCard({ data }: Props) {
+	const [modalVisible, setModalVisible] = useState(false);
 	const currentTime = moment().tz("Africa/Casablanca");
 	const color = Colors.program[data.color];
 	const endTimeMoment = moment(
@@ -148,82 +193,159 @@ export default function ProgramCard({ data }: Props) {
 	return (
 		<View style={[styles.container, { opacity: isFinished ? 0.5 : 1 }]}>
 			{data.time && <Time time={data.startTime} />}
-			<View
-				style={[styles.innerContainer, { backgroundColor: color.bg }]}
+			<TouchableOpacity
+				style={{
+					width: "100%",
+					alignItems: "center",
+					justifyContent: "center",
+				}}
+				onPress={() => {
+					if (!isFinished) setModalVisible(true);
+				}}
 			>
-				<View style={styles.header}>
-					{data.icon && (
-						<Ionicons
-							name={data.icon}
-							size={18}
-							color={color.text}
-							style={{ padding: 5 }}
-						/>
-					)}
-					<StyledText.Bold
-						style={[styles.title, { color: color.text }]}
-					>
-						{data.title}
-					</StyledText.Bold>
-				</View>
-				{data.moderators && (
-					<View style={{ alignItems: "center" }}>
-						<View
-							style={{
-								flexDirection: "row",
-								alignItems: "center",
-							}}
-						>
+				<View
+					style={[
+						styles.innerContainer,
+						{ backgroundColor: color.bg },
+					]}
+				>
+					<View style={styles.header}>
+						{data.icon && (
 							<Ionicons
-								name="time"
-								size={14}
+								name={data.icon}
+								size={18}
 								color={color.text}
+								style={{ padding: 5 }}
 							/>
-							<StyledText.Medium
+						)}
+						<StyledText.Bold
+							style={[styles.title, { color: color.text }]}
+						>
+							{data.title}
+						</StyledText.Bold>
+					</View>
+					{data.moderators && (
+						<View style={{ alignItems: "center" }}>
+							<View
 								style={{
-									color: color.text,
-									fontSize: 14,
-									paddingHorizontal: 5,
+									flexDirection: "row",
+									alignItems: "center",
 								}}
 							>
-								{data.startTime} - {data.endTime}
+								<Ionicons
+									name="time"
+									size={14}
+									color={color.text}
+								/>
+								<StyledText.Medium
+									style={{
+										color: color.text,
+										fontSize: 14,
+										paddingHorizontal: 5,
+									}}
+								>
+									{data.startTime} - {data.endTime}
+								</StyledText.Medium>
+							</View>
+							<View
+								style={{
+									alignSelf: "center",
+									height: 1,
+									width: "50%",
+									backgroundColor: color.tail,
+								}}
+							/>
+							<StyledText.Medium
+								style={{ color: color.text, fontSize: 14 }}
+							>
+								Modérateur{data.moderators.length > 1 && "s"}
 							</StyledText.Medium>
+							<SpeakerList
+								speakers={data.moderators}
+								color={color}
+							/>
 						</View>
+					)}
+					{data.speakers &&
+						(!data.title.includes("La Conférence de l'Année") ? (
+							<SpeakerList
+								speakers={data.speakers}
+								color={color}
+							/>
+						) : (
+							<ConfOfTheYear
+								speakers={data.speakers}
+								color={color}
+								image={data.image}
+							/>
+						))}
+					{data.laboratory && (
+						<Laboratory
+							name={data.laboratory}
+							logo={data.image}
+							color={color.text}
+						/>
+					)}
+				</View>
+				<View style={[styles.tail, { backgroundColor: color.tail }]} />
+			</TouchableOpacity>
+			<Modal visible={modalVisible} animationType="fade" transparent>
+				<View style={styles.modalContainer}>
+					<View style={styles.modalContent}>
+						<StyledText.Bold style={styles.modalTitle}>
+							{data.title}
+						</StyledText.Bold>
+						<LottieView
+							source={require("../../assets/animations/notification.json")}
+							autoPlay
+							loop
+							style={styles.lottie}
+						/>
+						<StyledText.Medium style={styles.modalText}>
+							Souhaitez-vous recevoir une notification pour cette
+							session ?
+						</StyledText.Medium>
 						<View
 							style={{
-								alignSelf: "center",
-								height: 1,
-								width: "50%",
-								backgroundColor: color.tail,
+								width: "100%",
+								flexDirection: "row",
+								alignItems: "center",
+								justifyContent: "space-evenly",
 							}}
-						/>
-						<StyledText.Medium
-							style={{ color: color.text, fontSize: 14 }}
 						>
-							Modérateur{data.moderators.length > 1 && "s"}
-						</StyledText.Medium>
-						<SpeakerList speakers={data.moderators} color={color} />
+							<TouchableOpacity
+								onPress={() => {
+									setModalVisible(false);
+								}}
+							>
+								<StyledText.Regular style={styles.modalButton}>
+									Non merci
+								</StyledText.Regular>
+							</TouchableOpacity>
+							<TouchableOpacity
+								onPress={() => {
+									myScheduleNotification(
+										data.title,
+										`Ne maquez pas cette session, elle commence dans 10 minutes`,
+										moment(
+											// `${data.date} ${data.startTime}`,
+											`2023-05-25 00:30`,
+											"YYYY-MM-DD HH:mm"
+										)
+											.subtract(10, "minutes")
+											.toDate()
+									);
+									setModalVisible(false);
+								}}
+							>
+								<StyledText.SemiBold style={styles.modalButton}>
+									Me notifier
+								</StyledText.SemiBold>
+							</TouchableOpacity>
+						</View>
 					</View>
-				)}
-				{data.speakers &&
-					(!data.title.includes("La Conférence de l'Année") ? (
-						<SpeakerList speakers={data.speakers} color={color} />
-					) : (
-						<ConfOfTheYear
-							speakers={data.speakers}
-							color={color}
-							image={data.image}
-						/>
-					))}
-				{data.laboratory && (
-					<Laboratory
-						name={data.laboratory}
-						logo={data.image}
-						color={color.text}
-					/>
-				)}
-			</View>
-			<View style={[styles.tail, { backgroundColor: color.tail }]} />
+				</View>
+			</Modal>
 		</View>
 	);
 }
@@ -292,5 +414,39 @@ const styles = StyleSheet.create({
 		justifyContent: "space-evenly",
 		paddingVertical: 10,
 		paddingHorizontal: 20,
+	},
+	modalContainer: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "rgba(0, 0, 0, 0.5)",
+	},
+	modalContent: {
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "white",
+		borderRadius: 10,
+		padding: 20,
+		width: "90%",
+	},
+	modalTitle: {
+		textAlign: "center",
+		fontSize: 20,
+		marginBottom: 10,
+	},
+	modalText: {
+		fontSize: 16,
+		marginBottom: 10,
+	},
+	modalButton: {
+		fontSize: 16,
+		color: Colors.primary,
+		textAlign: "center",
+		marginTop: 10,
+	},
+	lottie: {
+		width: 100,
+		height: 100,
+		marginBottom: 10,
 	},
 });

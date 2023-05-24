@@ -1,14 +1,11 @@
 import { useFonts } from "expo-font";
 import { useEffect, useState } from "react";
-import SplashScreen from "./src/screens/Splash";
 import * as StorageModifiers from "./src/utils/StorageModifiers";
-import RootLayoutNav from "./src/screens/_layout";
-import * as StyledText from "./src/components/StyledText";
-import { View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import * as React from "react";
 import Colors from "./src/constants/Colors";
+import * as Notifications from "expo-notifications";
 
 import HomeScreen from "./src/screens/Home";
 import EnrollScreen from "./src/screens/Enroll";
@@ -19,6 +16,14 @@ import CommitteeScreen from "./src/screens/Committee";
 import SponsorsScreen from "./src/screens/Sponsors";
 
 const Stack = createNativeStackNavigator();
+
+Notifications.setNotificationHandler({
+	handleNotification: async () => ({
+		shouldShowAlert: true,
+		shouldPlaySound: true,
+		shouldSetBadge: true,
+	}),
+});
 
 export default function App() {
 	const [] = useFonts({
@@ -34,6 +39,13 @@ export default function App() {
 		StorageModifiers.setCategories();
 		StorageModifiers.setSpeech();
 		StorageModifiers.setSponsors();
+		const getPerm = async () => {
+			const { status } = await Notifications.getPermissionsAsync();
+			if (status !== "granted") {
+				await Notifications.requestPermissionsAsync();
+			}
+		};
+		getPerm();
 	}, []);
 
 	return (
@@ -58,13 +70,13 @@ export default function App() {
 					component={EnrollScreen}
 					options={{ title: "Inscription" }}
 				/>
-					<Stack.Screen
-						name="Question"
-						component={QuestionScreen}
-						options={{
-							title: "Posez vos questions",
-						}}
-					/>
+				<Stack.Screen
+					name="Question"
+					component={QuestionScreen}
+					options={{
+						title: "Posez vos questions",
+					}}
+				/>
 				<Stack.Screen
 					name="Program"
 					component={ProgramNew}
@@ -101,5 +113,5 @@ export default function App() {
 		// 		</View>}
 		// 	{/* {loaded && <RootLayoutNav />} */}
 		// </>
-  );
+	);
 }
