@@ -14,12 +14,13 @@ const windowHeight = Dimensions.get("window").height;
 
 interface Props {
 	onLoadedChange: any;
+	fontsLoaded: boolean;
 }
 
-export default function SplashScreen({ onLoadedChange }: Props) {
+export default function SplashScreen({ onLoadedChange, fontsLoaded }: Props) {
 	const circleAnimation = useRef(new Animated.Value(0)).current;
 	const lottieProgress = useRef(new Animated.Value(0)).current;
-	const [animate, setAnimate] = useState(false);
+	const [animationFinished, setAnimationFinished] = useState(false);
 
 	const handleAnimationFinish = () => {
 		setTimeout(() => {
@@ -34,16 +35,17 @@ export default function SplashScreen({ onLoadedChange }: Props) {
 	};
 
 	useEffect(() => {
+		if (fontsLoaded && animationFinished) handleAnimationFinish();
+	}, [fontsLoaded, animationFinished]);
+
+	useEffect(() => {
 		setTimeout(() => {
-			setAnimate(true);
 			Animated.timing(lottieProgress, {
 				toValue: 1,
 				duration: 6000,
 				easing: Easing.linear,
 				useNativeDriver: true,
-			}).start(() => {
-				handleAnimationFinish();
-			});
+			}).start(() => setAnimationFinished(true));
 		}, 2000);
 	}, []);
 
