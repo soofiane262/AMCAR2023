@@ -11,16 +11,17 @@ import * as React from "react";
 import Colors from "./src/constants/Colors";
 
 import HomeScreen from "./src/screens/Home";
-import ChairmanScreen from "./src/screens/Chairman";
 import EnrollScreen from "./src/screens/Enroll";
-import ProgramNew from "./src/screens/ProgramNew";
-import CommitteeScreen from "./src/screens/Committee";
 import QuestionScreen from "./src/screens/Question";
+import ProgramNew from "./src/screens/ProgramNew";
+import ChairmanScreen from "./src/screens/Chairman";
+import CommitteeScreen from "./src/screens/Committee";
+import SponsorsScreen from "./src/screens/Sponsors";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-	const [fontsLoaded] = useFonts({
+	const [] = useFonts({
 		MontserratLight: require("./assets/fonts/Montserrat-Light.ttf"),
 		MontserratRegular: require("./assets/fonts/Montserrat-Regular.ttf"),
 		MontserratMedium: require("./assets/fonts/Montserrat-Medium.ttf"),
@@ -32,6 +33,7 @@ export default function App() {
 		StorageModifiers.setProgram();
 		StorageModifiers.setCategories();
 		StorageModifiers.setSpeech();
+		StorageModifiers.setSponsors();
 	}, []);
 
 	return (
@@ -42,9 +44,6 @@ export default function App() {
 					headerBackTitleVisible: false,
 					headerStyle: {
 						backgroundColor: Colors.primary,
-					},
-					headerTitleStyle: {
-						fontFamily: "MontserratSemiBold",
 					},
 					headerTintColor: Colors.white,
 				}}
@@ -59,6 +58,13 @@ export default function App() {
 					component={EnrollScreen}
 					options={{ title: "Inscription" }}
 				/>
+					<Stack.Screen
+						name="Question"
+						component={QuestionScreen}
+						options={{
+							title: "Posez vos questions",
+						}}
+					/>
 				<Stack.Screen
 					name="Program"
 					component={ProgramNew}
@@ -79,10 +85,10 @@ export default function App() {
 					}}
 				/>
 				<Stack.Screen
-					name="Question"
-					component={QuestionScreen}
+					name="Sponsors"
+					component={SponsorsScreen}
 					options={{
-						title: "Posez vos questions",
+						title: "Sponsors",
 					}}
 				/>
 			</Stack.Navigator>

@@ -12,6 +12,10 @@ import {
 	Animated,
 	Easing,
 } from "react-native";
+import {
+	questionValidationSchema,
+	QuestionFormData,
+} from "../utils/validationSchemas";
 import Colors from "../constants/Colors";
 import * as StyledText from "./StyledText";
 import InputWithIcon from "./InputWithIcon";
@@ -19,14 +23,6 @@ import LottieView from "lottie-react-native";
 import { useNavigation } from "@react-navigation/core";
 
 const API_URL = "https://sel-mars.com/amcar/api/question.php";
-
-const validationSchema = z.object({
-	question: z
-		.string({ required_error: "Veuillez entrer votre question" })
-		.nonempty({ message: "Veuillez entrer votre question" }),
-});
-
-type FormData = z.infer<typeof validationSchema>;
 
 export default function QuestionForm() {
 	const navigation = useNavigation();
@@ -49,8 +45,8 @@ export default function QuestionForm() {
 		control,
 		handleSubmit,
 		formState: { errors },
-	} = useForm<FormData>({
-		resolver: zodResolver(validationSchema),
+	} = useForm<QuestionFormData>({
+		resolver: zodResolver(questionValidationSchema),
 		mode: "onBlur",
 	});
 
@@ -95,7 +91,7 @@ export default function QuestionForm() {
 		}
 	};
 
-	const onSubmit: SubmitHandler<FormData> = async (data) => {
+	const onSubmit: SubmitHandler<QuestionFormData> = async (data) => {
 		Animated.timing(animation, {
 			toValue: 1,
 			duration: 300,
@@ -203,7 +199,7 @@ export default function QuestionForm() {
 						}}
 					>
 						<StyledText.SemiBold style={styles.submitButtonText}>
-							S'inscrire
+							Envoyer
 						</StyledText.SemiBold>
 					</Animated.View>
 

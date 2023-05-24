@@ -27,21 +27,23 @@ error_log(print_r($DecodedData, true)); // Check if the data is being received c
 // Check for required fields
 $requiredFields = ['question'];
 foreach ($requiredFields as $field) {
-    if (empty($DecodedData[$field])) {
-        echo json_encode(['status' => 'error', 'title' => 'Erreur','message' => 'Veuillez remplir tous les champs obligatoires.']);
+	if (empty($DecodedData[$field])) {
+		echo json_encode(['status' => 'error', 'title' => 'Erreur','message' => 'Veuillez remplir tous les champs obligatoires.']);
 		// Close the database connection
 		$conn->close();
         exit();
     }
 }
 
+// Extract the data from the request
 $question = $DecodedData['question'];
+$question_date = date('Y-m-d H:i:s');
 
 // Insert the data into the database
-$sql = "INSERT INTO questions (question) VALUES (?)";
+$sql = "INSERT INTO questions (question, question_date) VALUES (?, ?)";
 # Prepare stmt or reports errors
 ($stmt = $conn->prepare($sql)) or trigger_error($mysqli->error, E_USER_ERROR);
-($stmt->bind_param('s', $question)) or trigger_error($stmt->error, E_USER_ERROR);
+($stmt->bind_param('ss', $question, $question_date)) or trigger_error($stmt->error, E_USER_ERROR);
 # Execute stmt or reports errors
 ($stmt->execute()) or trigger_error($stmt->error, E_USER_ERROR);
 # Close stmt

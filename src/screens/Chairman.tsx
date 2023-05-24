@@ -26,12 +26,9 @@ export default function ChairmanScreen() {
 					}}
 					style={styles.picture}
 				/>
-				<LottieView
-					source={require("../../assets/animations/star.json")}
-					autoPlay
-					loop={false}
-					style={{ height: 50, top: -12 }}
-				/>
+				<StyledText.Bold style={styles.title}>
+					Pr. Saïd Chraibi
+				</StyledText.Bold>
 				<StyledText.SemiBold style={styles.label}>
 					Président de l'AMCAR
 				</StyledText.SemiBold>
@@ -82,11 +79,18 @@ const styles = StyleSheet.create({
 		height: 120,
 		top: -40,
 	},
+	title: {
+		color: Colors.white,
+		fontSize: 20,
+		textAlign: "center",
+		top: -20,
+		lineHeight: 28,
+	},
 	label: {
 		color: Colors.white,
 		fontSize: 16,
 		textAlign: "center",
-		top: -16,
+		top: -20,
 		lineHeight: 28,
 	},
 	text: {

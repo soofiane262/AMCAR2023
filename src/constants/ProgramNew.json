@@ -2,7 +2,7 @@
 	[
 		{
 			"id": 1,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "14:00",
 			"endTime": "15:00",
@@ -12,7 +12,7 @@
 		},
 		{
 			"id": 2,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "15:00",
 			"endTime": "16:30",
@@ -22,7 +22,7 @@
 		},
 		{
 			"id": 3,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "15:00",
 			"endTime": "16:30",
 			"color": "blue",
@@ -36,7 +36,7 @@
 		},
 		{
 			"id": 4,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "15:00",
 			"endTime": "16:30",
 			"color": "blue",
@@ -50,7 +50,7 @@
 		},
 		{
 			"id": 5,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "15:00",
 			"endTime": "16:30",
 			"color": "blue",
@@ -64,7 +64,7 @@
 		},
 		{
 			"id": 6,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "15:00",
 			"endTime": "16:30",
 			"color": "blue",
@@ -78,7 +78,7 @@
 		},
 		{
 			"id": 7,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "15:00",
 			"endTime": "16:30",
 			"color": "blue",
@@ -92,7 +92,7 @@
 		},
 		{
 			"id": 8,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "16:30",
 			"endTime": "17:00",
@@ -102,7 +102,7 @@
 		},
 		{
 			"id": 9,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "17:00",
 			"endTime": "17:15",
@@ -138,7 +138,7 @@
 		},
 		{
 			"id": 10,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"startTime": "17:15",
 			"endTime": "18:30",
 			"color": "green",
@@ -153,7 +153,7 @@
 					"city": "Rabat"
 				},
 				{
-					"name": "Y. Ettoumi",
+					"name": "Y. Ettaoumi",
 					"city": "Casablanca"
 				},
 				{
@@ -164,7 +164,7 @@
 		},
 		{
 			"id": 11,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "17:15",
 			"endTime": "17:30",
@@ -179,7 +179,7 @@
 		},
 		{
 			"id": 12,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "17:30",
 			"endTime": "17:45",
@@ -194,7 +194,7 @@
 		},
 		{
 			"id": 13,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "17:45",
 			"endTime": "18:00",
@@ -209,7 +209,7 @@
 		},
 		{
 			"id": 14,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "18:00",
 			"endTime": "18:15",
@@ -224,7 +224,7 @@
 		},
 		{
 			"id": 15,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "18:15",
 			"endTime": "18:30",
@@ -233,8 +233,25 @@
 			"title": "Discussion"
 		},
 		{
+			"id": 16,
+			"date": "2023-06-08",
+			"time": true,
+			"startTime": "18:30",
+			"endTime": "19:00",
+			"color": "red",
+			"title": "Actualités dans la gestion des dyslipidèmies en post SCA",
+			"speakers": [
+				{
+					"name": "M. Alamai",
+					"city": "Casablanca"
+				}
+			],
+			"laboratory": "Sanofi",
+			"image": "https://sel-mars.com/amcar/images/sponsors/sanofi.png"
+		},
+		{
 			"id": 17,
-			"date": "2023-05-02",
+			"date": "2023-06-08",
 			"time": true,
 			"startTime": "19:00",
 			"endTime": "19:45",
@@ -243,8 +260,7 @@
 			"image": "https://sel-mars.com/amcar/images/i_aberkane.png",
 			"speakers": [
 				{
-					"name": "I. Aberkane",
-					"city": "Paris"
+					"name": "I. Aberkane"
 				}
 			],
 			"moderators": [
@@ -262,7 +278,7 @@
 	[
 		{
 			"id": 18,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "08:30",
 			"endTime": "10:00",
 			"color": "green",
@@ -292,7 +308,7 @@
 		},
 		{
 			"id": 19,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "08:30",
 			"endTime": "08:45",
@@ -307,7 +323,7 @@
 		},
 		{
 			"id": 20,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "08:45",
 			"endTime": "08:50",
@@ -317,7 +333,7 @@
 		},
 		{
 			"id": 21,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "08:50",
 			"endTime": "09:05",
@@ -332,7 +348,7 @@
 		},
 		{
 			"id": 22,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "09:05",
 			"endTime": "09:10",
@@ -342,7 +358,7 @@
 		},
 		{
 			"id": 23,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "09:10",
 			"endTime": "09:25",
@@ -357,7 +373,7 @@
 		},
 		{
 			"id": 24,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "09:25",
 			"endTime": "09:30",
@@ -367,7 +383,7 @@
 		},
 		{
 			"id": 25,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "09:30",
 			"endTime": "09:45",
@@ -382,7 +398,7 @@
 		},
 		{
 			"id": 26,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "09:45",
 			"endTime": "09:50",
@@ -392,7 +408,7 @@
 		},
 		{
 			"id": 27,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "10:00",
 			"endTime": "10:30",
@@ -409,7 +425,7 @@
 		},
 		{
 			"id": 28,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "10:30",
 			"endTime": "11:00",
@@ -419,7 +435,7 @@
 		},
 		{
 			"id": 29,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "11:00",
 			"endTime": "12:30",
 			"color": "green",
@@ -445,7 +461,7 @@
 		},
 		{
 			"id": 30,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "11:00",
 			"endTime": "11:20",
@@ -460,7 +476,7 @@
 		},
 		{
 			"id": 31,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "11:20",
 			"endTime": "11:25",
@@ -470,7 +486,7 @@
 		},
 		{
 			"id": 32,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "11:25",
 			"endTime": "11:50",
@@ -485,7 +501,7 @@
 		},
 		{
 			"id": 33,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "11:50",
 			"endTime": "11:55",
@@ -495,7 +511,7 @@
 		},
 		{
 			"id": 34,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "11:55",
 			"endTime": "12:20",
@@ -510,7 +526,7 @@
 		},
 		{
 			"id": 35,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "12:20",
 			"endTime": "12:25",
@@ -520,7 +536,7 @@
 		},
 		{
 			"id": 36,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "12:30",
 			"endTime": "13:00",
@@ -533,11 +549,11 @@
 				}
 			],
 			"laboratory": "Novo Nordisk",
-			"image": "https://sel-mars.com/amcar/images/sponsors/novo_nordisk.png"
+			"image": "https://sel-mars.com/amcar/images/sponsors/novonordisk.png"
 		},
 		{
 			"id": 37,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "13:00",
 			"endTime": "14:30",
@@ -547,7 +563,7 @@
 		},
 		{
 			"id": 38,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "red",
@@ -556,7 +572,7 @@
 		},
 		{
 			"id": 39,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -570,7 +586,7 @@
 		},
 		{
 			"id": 40,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -584,7 +600,7 @@
 		},
 		{
 			"id": 41,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -598,7 +614,7 @@
 		},
 		{
 			"id": 42,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -612,7 +628,7 @@
 		},
 		{
 			"id": 43,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "14:30",
 			"endTime": "16:00",
 			"color": "green",
@@ -638,7 +654,7 @@
 		},
 		{
 			"id": 44,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "14:30",
 			"endTime": "14:45",
@@ -653,7 +669,7 @@
 		},
 		{
 			"id": 45,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "14:45",
 			"endTime": "15:00",
@@ -668,7 +684,7 @@
 		},
 		{
 			"id": 46,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "15:00",
 			"endTime": "15:15",
@@ -683,7 +699,7 @@
 		},
 		{
 			"id": 47,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "15:15",
 			"endTime": "15:30",
@@ -698,7 +714,7 @@
 		},
 		{
 			"id": 48,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "15:30",
 			"endTime": "16:00",
@@ -708,7 +724,7 @@
 		},
 		{
 			"id": 49,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "16:00",
 			"endTime": "16:30",
@@ -721,11 +737,11 @@
 				}
 			],
 			"laboratory": "Atlas Pharm • Tecnimede",
-			"image": "https://sel-mars.com/amcar/images/sponsors/atlas_pharm.png"
+			"image": "https://sel-mars.com/amcar/images/sponsors/atlaspharm.png"
 		},
 		{
 			"id": 50,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "16:30",
 			"endTime": "17:00",
@@ -735,7 +751,7 @@
 		},
 		{
 			"id": 51,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"startTime": "17:00",
 			"endTime": "18:30",
 			"color": "green",
@@ -761,7 +777,7 @@
 		},
 		{
 			"id": 52,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:00",
 			"endTime": "17:15",
@@ -776,7 +792,7 @@
 		},
 		{
 			"id": 53,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:15",
 			"endTime": "17:20",
@@ -786,7 +802,7 @@
 		},
 		{
 			"id": 54,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:20",
 			"endTime": "17:35",
@@ -801,7 +817,7 @@
 		},
 		{
 			"id": 55,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:35",
 			"endTime": "17:40",
@@ -811,7 +827,7 @@
 		},
 		{
 			"id": 56,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:40",
 			"endTime": "17:55",
@@ -826,7 +842,7 @@
 		},
 		{
 			"id": 57,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "17:55",
 			"endTime": "18:00",
@@ -836,7 +852,7 @@
 		},
 		{
 			"id": 58,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "18:00",
 			"endTime": "18:15",
@@ -851,7 +867,7 @@
 		},
 		{
 			"id": 59,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "18:15",
 			"endTime": "18:20",
@@ -861,7 +877,7 @@
 		},
 		{
 			"id": 60,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "18:30",
 			"endTime": "19:00",
@@ -878,7 +894,7 @@
 		},
 		{
 			"id": 61,
-			"date": "2023-05-03",
+			"date": "2023-06-09",
 			"time": true,
 			"startTime": "20:30",
 			"endTime": "23:58",
@@ -890,7 +906,7 @@
 	[
 		{
 			"id": 62,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "08:30",
 			"endTime": "10:00",
 			"color": "green",
@@ -916,7 +932,7 @@
 		},
 		{
 			"id": 63,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "08:30",
 			"endTime": "08:45",
@@ -931,7 +947,7 @@
 		},
 		{
 			"id": 64,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "08:45",
 			"endTime": "08:50",
@@ -941,7 +957,7 @@
 		},
 		{
 			"id": 65,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "08:50",
 			"endTime": "09:05",
@@ -956,7 +972,7 @@
 		},
 		{
 			"id": 66,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "09:05",
 			"endTime": "09:10",
@@ -966,7 +982,7 @@
 		},
 		{
 			"id": 67,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "09:10",
 			"endTime": "09:25",
@@ -981,7 +997,7 @@
 		},
 		{
 			"id": 68,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "09:25",
 			"endTime": "09:30",
@@ -991,7 +1007,7 @@
 		},
 		{
 			"id": 69,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "09:30",
 			"endTime": "09:45",
@@ -1006,7 +1022,7 @@
 		},
 		{
 			"id": 70,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "09:45",
 			"endTime": "09:50",
@@ -1016,7 +1032,7 @@
 		},
 		{
 			"id": 71,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "10:00",
 			"endTime": "10:30",
@@ -1029,11 +1045,11 @@
 				}
 			],
 			"laboratory": "Astra Zeneca",
-			"image": "https://sel-mars.com/amcar/images/sponsors/astra_zeneca.png"
+			"image": "https://sel-mars.com/amcar/images/sponsors/astrazeneca.png"
 		},
 		{
 			"id": 72,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "10:30",
 			"endTime": "11:00",
@@ -1043,7 +1059,7 @@
 		},
 		{
 			"id": 73,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "11:00",
 			"endTime": "12:30",
 			"color": "green",
@@ -1069,7 +1085,7 @@
 		},
 		{
 			"id": 74,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:00",
 			"endTime": "11:15",
@@ -1084,7 +1100,7 @@
 		},
 		{
 			"id": 75,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:15",
 
@@ -1101,7 +1117,7 @@
 		},
 		{
 			"id": 76,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:30",
 
@@ -1117,7 +1133,7 @@
 		},
 		{
 			"id": 77,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:45",
 			"endTime": "12:00",
@@ -1132,7 +1148,7 @@
 		},
 		{
 			"id": 78,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "12:00",
 			"endTime": "12:30",
@@ -1142,7 +1158,7 @@
 		},
 		{
 			"id": 79,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "12:30",
 			"endTime": "13:00",
@@ -1159,7 +1175,7 @@
 		},
 		{
 			"id": 80,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "13:00",
 			"endTime": "14:30",
@@ -1169,7 +1185,7 @@
 		},
 		{
 			"id": 81,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "red",
@@ -1178,7 +1194,7 @@
 		},
 		{
 			"id": 82,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -1192,7 +1208,7 @@
 		},
 		{
 			"id": 83,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -1206,7 +1222,7 @@
 		},
 		{
 			"id": 84,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -1220,7 +1236,7 @@
 		},
 		{
 			"id": 85,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
@@ -1234,7 +1250,7 @@
 		},
 		{
 			"id": 86,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "14:30",
 			"endTime": "16:00",
 			"color": "green",
@@ -1260,7 +1276,7 @@
 		},
 		{
 			"id": 87,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "14:30",
 			"endTime": "14:45",
@@ -1275,7 +1291,7 @@
 		},
 		{
 			"id": 88,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "14:45",
 			"endTime": "15:00",
@@ -1290,7 +1306,7 @@
 		},
 		{
 			"id": 89,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "15:00",
 			"endTime": "15:15",
@@ -1305,7 +1321,7 @@
 		},
 		{
 			"id": 90,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "15:15",
 			"endTime": "15:30",
@@ -1320,7 +1336,7 @@
 		},
 		{
 			"id": 91,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "15:30",
 			"endTime": "16:00",
@@ -1330,7 +1346,7 @@
 		},
 		{
 			"id": 92,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "16:00",
 			"endTime": "16:30",
@@ -1343,11 +1359,11 @@
 				}
 			],
 			"laboratory": "Astra Zeneca",
-			"image": "https://sel-mars.com/amcar/images/sponsors/astra-zeneca.png"
+			"image": "https://sel-mars.com/amcar/images/sponsors/astrazeneca.png"
 		},
 		{
 			"id": 93,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "16:30",
 			"endTime": "17:00",
@@ -1357,7 +1373,7 @@
 		},
 		{
 			"id": 94,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"startTime": "17:00",
 			"endTime": "18:30",
 			"color": "green",
@@ -1383,7 +1399,7 @@
 		},
 		{
 			"id": 95,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "17:00",
 			"endTime": "17:15",
@@ -1398,7 +1414,7 @@
 		},
 		{
 			"id": 96,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "17:15",
 			"endTime": "17:30",
@@ -1413,7 +1429,7 @@
 		},
 		{
 			"id": 97,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "17:30",
 			"endTime": "17:45",
@@ -1428,7 +1444,7 @@
 		},
 		{
 			"id": 98,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "17:45",
 			"endTime": "18:00",
@@ -1443,7 +1459,7 @@
 		},
 		{
 			"id": 99,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "18:00",
 			"endTime": "18:30",
@@ -1453,17 +1469,17 @@
 		},
 		{
 			"id": 100,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "18:45",
 			"endTime": "19:45",
 			"icon": "medal",
 			"color": "red",
-			"title": "Hommages et Remise des Prix"
+			"title": "Remise des Prix"
 		},
 		{
 			"id": 101,
-			"date": "2023-05-04",
+			"date": "2023-06-10",
 			"time": true,
 			"startTime": "21:00",
 			"endTime": "23:58",

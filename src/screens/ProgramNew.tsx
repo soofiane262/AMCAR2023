@@ -13,8 +13,8 @@ export default function ProgramNew() {
 	moment.locale("fr");
 	const [program, setProgram] = useState<ProgramData[][]>([]);
 	const today = moment().tz("Africa/Casablanca").format("YYYY-MM-DD");
-	const startDate = moment("2023-05-02").format("YYYY-MM-DD");
-	const endDate = moment("2023-05-04").format("YYYY-MM-DD");
+	const startDate = moment("2023-06-08").format("YYYY-MM-DD");
+	const endDate = moment("2023-06-10").format("YYYY-MM-DD");
 	const day = today >= startDate && today <= endDate ? today : startDate;
 	const dayIdx = moment(day).diff(moment(startDate), "days");
 	const horFlatListRef = useRef<FlatList>(null);

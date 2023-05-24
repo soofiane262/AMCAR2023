@@ -1,7 +1,7 @@
 import { SubmitHandler, useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-	formValidationSchema,
+	enrollValidationSchema,
 	EnrollFormData,
 } from "../utils/validationSchemas";
 import RadioWithText from "./RadioWithText";
@@ -44,8 +44,8 @@ export default function EnrollForm() {
 		control._reset();
 		setLoading(false);
 		const loadCategories = async () => {
-			const data = await getCategories();
-			setCategoriesData(data);
+			const dataCategories = await getCategories();
+			setCategoriesData(dataCategories);
 		};
 		loadCategories();
 	}, []);
@@ -55,7 +55,7 @@ export default function EnrollForm() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm<EnrollFormData>({
-		resolver: zodResolver(formValidationSchema),
+		resolver: zodResolver(enrollValidationSchema),
 		mode: "onBlur",
 	});
 
@@ -165,7 +165,7 @@ export default function EnrollForm() {
 							control={control}
 							fieldName="firstName"
 							error={errors.firstName ? true : false}
-							placeholder="eg. Soufiane"
+							placeholder="eg. John"
 							onBlur={onBlur}
 							onChangeText={onChange}
 							value={value}
@@ -189,7 +189,7 @@ export default function EnrollForm() {
 							control={control}
 							fieldName="lastName"
 							error={errors.lastName ? true : false}
-							placeholder="eg. El Marsi"
+							placeholder="eg. Doe"
 							onBlur={onBlur}
 							onChangeText={onChange}
 							value={value}
@@ -240,7 +240,7 @@ export default function EnrollForm() {
 							error={errors.email ? true : false}
 							keyboardType={"email-address"}
 							autoCapitalize="none"
-							placeholder="eg. marsi.sofiane@gmail.com"
+							placeholder="eg. john.doe@domain.com"
 							onBlur={onBlur}
 							onChangeText={onChange}
 							value={value}
@@ -275,6 +275,37 @@ export default function EnrollForm() {
 				</StyledText.Medium>
 
 				<StyledText.SemiBold style={styles.inputLabel}>
+					Statut
+				</StyledText.SemiBold>
+				<Controller
+					control={control}
+					name="statut"
+					rules={{ required: true }}
+					render={({ field: { onChange, onBlur, value } }) => (
+						<View style={{ width: "100%" }}>
+							<RadioWithText
+								label="Spécialiste"
+								value={value}
+								onChange={onChange}
+							/>
+							<RadioWithText
+								label="Résident"
+								value={value}
+								onChange={onChange}
+							/>
+							<RadioWithText
+								label="Professeur"
+								value={value}
+								onChange={onChange}
+							/>
+						</View>
+					)}
+				/>
+				<StyledText.Medium style={styles.error}>
+					{errors.statut ? errors.statut.message : ""}
+				</StyledText.Medium>
+
+				<StyledText.SemiBold style={styles.inputLabel}>
 					Secteur
 				</StyledText.SemiBold>
 				<Controller
@@ -306,36 +337,56 @@ export default function EnrollForm() {
 				</StyledText.Medium>
 
 				<StyledText.SemiBold style={styles.inputLabel}>
-					Catégorie
+					Lieu d'Exercice
 				</StyledText.SemiBold>
 				<Controller
 					control={control}
-					name="category"
+					name="place"
 					rules={{ required: true }}
 					render={({ field: { onChange, onBlur, value } }) => (
-						<View style={{ width: "100%" }}>
-							<RadioWithText
-								label="Cardiologue 3000 Dhs"
-								wantedValue="Cardiologue"
-								value={value}
-								onChange={onChange}
-							/>
-							<RadioWithText
-								label="Résident 1800 Dhs"
-								wantedValue="Résident"
-								value={value}
-								onChange={onChange}
-							/>
-						</View>
+						<InputWithIcon
+							control={control}
+							fieldName="place"
+							error={errors.place ? true : false}
+							placeholder="eg. CHU Ibno Rochd"
+							onBlur={onBlur}
+							onChangeText={onChange}
+							value={value}
+							icon="medkit"
+						/>
 					)}
 				/>
 				<StyledText.Medium style={styles.error}>
-					{errors.category ? errors.category.message : ""}
+					{errors.place ? errors.place.message : ""}
+				</StyledText.Medium>
+
+				<StyledText.SemiBold style={styles.inputLabel}>
+					Ville
+				</StyledText.SemiBold>
+				<Controller
+					control={control}
+					name="city"
+					rules={{ required: true }}
+					render={({ field: { onChange, onBlur, value } }) => (
+						<InputWithIcon
+							control={control}
+							fieldName="city"
+							error={errors.city ? true : false}
+							placeholder="eg. Casablanca"
+							onBlur={onBlur}
+							onChangeText={onChange}
+							value={value}
+							icon="map"
+						/>
+					)}
+				/>
+				<StyledText.Medium style={styles.error}>
+					{errors.city ? errors.city.message : ""}
 				</StyledText.Medium>
 
 				<Controller
 					control={control}
-					name="accommodation"
+					name="newsletter"
 					render={({ field: { onChange, onBlur, value } }) => (
 						<TouchableOpacity
 							onPress={() => onChange(!value)}
@@ -347,7 +398,7 @@ export default function EnrollForm() {
 						>
 							<View style={{ flex: 1 }}>
 								<StyledText.SemiBold style={styles.inputLabel}>
-									Hébergement 9800 Dhs
+									Newsletter
 								</StyledText.SemiBold>
 							</View>
 							<Switch
@@ -365,12 +416,10 @@ export default function EnrollForm() {
 						padding: 10,
 					}}
 				>
-					Hotel Hilton et Hotel Hyatt Regency{"\n"}• 3 nuits d'hôtel
-					en pension complète{"\n"}• Repas et boissons pour les 3
-					jours
+					J'accepte de recevoir les e-mails du groupe AMCAR
 				</StyledText.Medium>
 				<StyledText.Medium style={styles.error}>
-					{errors.accommodation ? errors.accommodation.message : ""}
+					{errors.newsletter ? errors.newsletter.message : ""}
 				</StyledText.Medium>
 
 				<TouchableOpacity

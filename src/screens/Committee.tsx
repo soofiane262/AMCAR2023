@@ -41,9 +41,12 @@ export default function CommitteeScreen() {
 					style={styles.picture}
 				/>
 				<StyledText.SemiBold
-					style={[styles.title, { color: Colors.white }]}
+					style={[
+						styles.title,
+						{ color: Colors.white, fontSize: 18 },
+					]}
 				>
-					Said Chraïbi
+					Said CHRAÏBI
 				</StyledText.SemiBold>
 				<StyledText.Medium
 					style={[styles.label, { color: Colors.white }]}
@@ -88,6 +91,7 @@ const styles = StyleSheet.create({
 	title: {
 		color: Colors.secondary,
 		fontSize: 16,
+		fontFamily: "MontserratBold",
 		textAlign: "center",
 	},
 	label: {

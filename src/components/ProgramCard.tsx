@@ -32,17 +32,21 @@ const Speaker = (speaker: SpeakerProps, color: any) => {
 			<StyledText.SemiBold style={[styles.name, { color: color.text }]}>
 				{speaker.name}
 			</StyledText.SemiBold>
-			<View style={styles.cityContainer}>
-				<Ionicons
-					name="location"
-					size={12}
-					color={color.tail}
-					style={{ paddingRight: 5 }}
-				/>
-				<StyledText.Medium style={[styles.city, { color: color.tail }]}>
-					{speaker.city}
-				</StyledText.Medium>
-			</View>
+			{speaker.city && (
+				<View style={styles.cityContainer}>
+					<Ionicons
+						name="location"
+						size={12}
+						color={color.tail}
+						style={{ paddingRight: 5 }}
+					/>
+					<StyledText.Medium
+						style={[styles.city, { color: color.tail }]}
+					>
+						{speaker.city}
+					</StyledText.Medium>
+				</View>
+			)}
 		</View>
 	);
 };
@@ -119,7 +123,7 @@ const Laboratory = ({ name, logo, color }: LaboratoryProps) => {
 			{logo && (
 				<Image
 					source={{ uri: logo }}
-					style={{ width: 60, height: 60 }}
+					style={{ width: 80, height: 80 }}
 				/>
 			)}
 		</View>
@@ -137,7 +141,10 @@ export default function ProgramCard({ data }: Props) {
 		`${data.date} ${data.endTime}`,
 		"YYYY-MM-DD HH:mm"
 	);
-	const isFinished = currentTime.isAfter(endTimeMoment);
+	const endDateMoment = moment(`2023-06-10 23:59`, "YYYY-MM-DD HH:mm");
+	const isFinished =
+		currentTime.isAfter(endTimeMoment) &&
+		currentTime.isBefore(endDateMoment);
 	return (
 		<View style={[styles.container, { opacity: isFinished ? 0.5 : 1 }]}>
 			{data.time && <Time time={data.startTime} />}

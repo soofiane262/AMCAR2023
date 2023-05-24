@@ -49,8 +49,7 @@ const Categories = [
 	"Santé publique",
 	"Sponsor",
 	"Stomatologie",
-	"Urologie"
-  ];
-  
-  export default Categories;
-  
+	"Urologie",
+];
+
+export default Categories;
