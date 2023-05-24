@@ -16,9 +16,12 @@ import { HomeButtonData, HomeButtons } from "../constants/HomeButtons";
 import * as HomeScreenButtons from "../components/HomeScreenButtons";
 import Colors from "../constants/Colors";
 
+import SplashScreen from "./Splash";
+
 const windowHeight = Dimensions.get("window").height;
 
 export default function HomeScreen() {
+	const [loaded, setLoaded] = useState(false);
 	const today = moment().format("YYYY-MM-DD");
 	const animation = useRef(new Animated.Value(0)).current;
 
@@ -49,33 +52,40 @@ export default function HomeScreen() {
 		return <ButtonComponent button={item} />;
 	};
 
-	return (
-		<>
-			<StatusBar style="light" />
-			{/* <LottieView
+	if (!loaded)
+		return (
+			<>
+				<SplashScreen onLoadedChange={setLoaded} />
+			</>
+		);
+	else
+		return (
+			<>
+				<StatusBar style="light" />
+				{/* <LottieView
 				source={require("../../assets/animations/home.json")}
 				autoPlay
 				loop={false}
 				style={styles.animation}
 			/> */}
-			<SafeAreaView style={{ flex: 1 }}>
-				<View style={styles.container}>
-					<ScrollView
-						showsVerticalScrollIndicator={false}
-						style={{ flex: 1 }}
-					>
-						<View style={{ height: 20 }} />
-						<View style={styles.row}>
-							{renderButton({
-								item: HomeButtons[3],
-								buttonSize: "md",
-							})}
-						</View>
-					</ScrollView>
-				</View>
-			</SafeAreaView>
-		</>
-	);
+				<SafeAreaView style={{ flex: 1 }}>
+					<View style={styles.container}>
+						<ScrollView
+							showsVerticalScrollIndicator={false}
+							style={{ flex: 1 }}
+						>
+							<View style={{ height: 20 }} />
+							<View style={styles.row}>
+								{renderButton({
+									item: HomeButtons[3],
+									buttonSize: "md",
+								})}
+							</View>
+						</ScrollView>
+					</View>
+				</SafeAreaView>
+			</>
+		);
 }
 
 const styles = StyleSheet.create({
