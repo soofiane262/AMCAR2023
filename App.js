@@ -24,8 +24,9 @@ export default function App() {
 
 	return (
 		<>
-			{!loaded && <SplashScreen onLoadedChange={setLoaded} />}
-			{loaded && <RootLayoutNav />}
+			{/* {!loaded && <SplashScreen onLoadedChange={setLoaded} />} */}
+			{/* {loaded && <RootLayoutNav />} */}
+			<RootLayoutNav />
 		</>
   );
 }

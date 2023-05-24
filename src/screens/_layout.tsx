@@ -1,9 +1,9 @@
 import HomeScreen from "./Home";
-import EnrollScreen from "./Enroll";
-import ProgramNew from "./ProgramNew";
+// import EnrollScreen from "./Enroll";
+// import ProgramNew from "./ProgramNew";
 import ChairmanScreen from "./Chairman";
-import CommitteeScreen from "./Committee";
-import QuestionScreen from "./Question";
+// import CommitteeScreen from "./Committee";
+// import QuestionScreen from "./Question";
 
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -34,6 +34,13 @@ export default function RootLayoutNav() {
 					options={{ headerShown: false }}
 				/>
 				<Stack.Screen
+					name="Chairman"
+					component={ChairmanScreen}
+					options={{
+						title: "Mot de Bienvenue",
+					}}
+				/>
+				{/* <Stack.Screen
 					name="Enroll"
 					component={EnrollScreen}
 					options={{ title: "Inscription" }}
@@ -63,7 +70,7 @@ export default function RootLayoutNav() {
 					options={{
 						title: "Posez vos questions",
 					}}
-				/>
+				/> */}
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
