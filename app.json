@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "AMCAR2023",
 		"slug": "AMCAR2023",
-		"version": "1.2.0",
+		"version": "1.2.1",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
 		"userInterfaceStyle": "dark",
@@ -13,7 +13,7 @@
 		},
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
-			"supportsTablet": true,
+			"supportsTablet": false,
 			"bundleIdentifier": "com.amcar.jn30"
 		},
 		"android": {
