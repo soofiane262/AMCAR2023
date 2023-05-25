@@ -3,6 +3,7 @@ import Categories from "../constants/Categories";
 import Speech from "../constants/Speech";
 import Program from "../constants/ProgramNew";
 import Sponsors from "../constants/Sponsors";
+import Speakers from "../constants/Speakers";
 import axios from "axios";
 
 export const getCategories = async () => {
@@ -40,42 +41,6 @@ export const setCategories = async () => {
 		console.error("Error setting categories in storage:", error);
 	}
 };
-
-// export const getCategories = async () => {
-// 	try {
-// 		const categories = await AsyncStorage.getItem("categories");
-// 		if (
-// 			categories !== null &&
-// 			categories !== undefined &&
-// 			categories !== "[]"
-// 		) {
-// 			return JSON.parse(categories);
-// 		}
-// 	} catch (e) {
-// 		console.error("Error retrieving categories from storage:", e);
-// 	}
-// 	return Categories;
-// };
-
-// export const setCategories = async () => {
-// 	try {
-// 		const response = await axios.get(
-// 			"https://sel-mars.com/amcar/api/getCategoriesData.php",
-// 			{
-// 				// query URL without using browser cache
-// 				headers: {
-// 					"Cache-Control": "no-cache",
-// 					Pragma: "no-cache",
-// 					Expires: "0",
-// 				},
-// 			}
-// 		);
-// 		const categories = response.data;
-// 		await AsyncStorage.setItem("categories", JSON.stringify(categories));
-// 	} catch (error) {
-// 		console.error("Error setting categories in storage:", error);
-// 	}
-// };
 
 export const getSpeech = async () => {
 	try {
@@ -170,5 +135,37 @@ export const setSponsors = async () => {
 		await AsyncStorage.setItem("sponsors", JSON.stringify(sponsors));
 	} catch (error) {
 		console.error("Error setting sponsors in storage:", error);
+	}
+};
+
+export const getSpeakers = async () => {
+	try {
+		const speakers = await AsyncStorage.getItem("speakers");
+		if (speakers !== null && speakers !== undefined && speakers !== "[]") {
+			return JSON.parse(speakers);
+		}
+	} catch (e) {
+		console.error("Error retrieving speakers from storage:", e);
+	}
+	return Speakers;
+};
+
+export const setSpeakers = async () => {
+	try {
+		const response = await axios.get(
+			"https://sel-mars.com/amcar/speakers.json",
+			{
+				// query URL without using browser cache
+				headers: {
+					"Cache-Control": "no-cache",
+					Pragma: "no-cache",
+					Expires: "0",
+				},
+			}
+		);
+		const speakers = response.data;
+		await AsyncStorage.setItem("speakers", JSON.stringify(speakers));
+	} catch (error) {
+		console.error("Error setting speakers in storage:", error);
 	}
 };

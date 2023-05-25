@@ -12,6 +12,7 @@ import EnrollScreen from "./src/screens/Enroll";
 import QuestionScreen from "./src/screens/Question";
 import ProgramNew from "./src/screens/ProgramNew";
 import ChairmanScreen from "./src/screens/Chairman";
+import SpeakersScreen from "./src/screens/Speakers";
 import CommitteeScreen from "./src/screens/Committee";
 import SponsorsScreen from "./src/screens/Sponsors";
 
@@ -87,6 +88,13 @@ export default function App() {
 					component={ChairmanScreen}
 					options={{
 						title: "Mot de Bienvenue",
+					}}
+				/>
+				<Stack.Screen
+					name="Speakers"
+					component={SpeakersScreen}
+					options={{
+						title: "Orateurs",
 					}}
 				/>
 				<Stack.Screen

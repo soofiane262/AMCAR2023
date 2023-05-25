@@ -9,7 +9,7 @@ import {
 	Modal,
 	Easing,
 } from "react-native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import * as StyledText from "./StyledText";
 import { ProgramData } from "../constants/ProgramNew";
 import Colors from "../constants/Colors";
@@ -27,7 +27,7 @@ const myScheduleNotification = async (
 		await Notifications.getAllScheduledNotificationsAsync();
 
 	const isDuplicate = existingNotifications.some(
-		(notification) => notification.content.title === title
+		(notification) => notification.content.body === body
 	);
 
 	if (isDuplicate) {
@@ -302,8 +302,8 @@ export default function ProgramCard({ data }: Props) {
 							style={styles.lottie}
 						/>
 						<StyledText.Medium style={styles.modalText}>
-							Souhaitez-vous recevoir une notification pour cette
-							session ?
+							Souhaitez-vous recevoir un rappel avant le début de
+							cette session ?
 						</StyledText.Medium>
 						<View
 							style={{
@@ -325,11 +325,11 @@ export default function ProgramCard({ data }: Props) {
 							<TouchableOpacity
 								onPress={() => {
 									myScheduleNotification(
-										data.title,
-										`Ne maquez pas cette session, elle commence dans 10 minutes`,
+										"Ne maquez pas cette session !",
+										`La session '${data.title}' commence dans 10 minutes`,
 										moment(
 											// `${data.date} ${data.startTime}`,
-											`2023-05-25 00:30`,
+											`2023-05-25 00:50`,
 											"YYYY-MM-DD HH:mm"
 										)
 											.subtract(10, "minutes")
