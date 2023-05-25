@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import Colors from "../constants/Colors";
 import LottieView from "lottie-react-native";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const windowHeight = Dimensions.get("window").height;
 
@@ -19,7 +19,6 @@ interface Props {
 export default function SplashScreen({ onLoadedChange }: Props) {
 	const circleAnimation = useRef(new Animated.Value(0)).current;
 	const lottieProgress = useRef(new Animated.Value(0)).current;
-	const [animationFinished, setAnimationFinished] = useState(false);
 
 	const handleAnimationFinish = () => {
 		setTimeout(() => {
@@ -69,11 +68,7 @@ export default function SplashScreen({ onLoadedChange }: Props) {
 				source={require("../../assets/animations/splash.json")}
 				progress={lottieProgress}
 				style={styles.animation}
-				// autoPlay
-				// loop={false}
-				// onAnimationFinish={handleAnimationFinish}
 			/>
-			{/* <Text style={{ color: "white" }}>splash</Text> */}
 		</View>
 	);
 }

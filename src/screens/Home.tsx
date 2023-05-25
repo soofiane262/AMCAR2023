@@ -21,6 +21,7 @@ export default function HomeScreen() {
 	const [loaded, setLoaded] = useState(false);
 	const today = moment().format("YYYY-MM-DD");
 	const animation = useRef(new Animated.Value(0)).current;
+	const lottieProgress = useRef(new Animated.Value(0)).current;
 
 	useEffect(() => {
 		Animated.timing(animation, {
@@ -30,6 +31,17 @@ export default function HomeScreen() {
 			useNativeDriver: true,
 		}).start();
 	}, [animation]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			Animated.timing(lottieProgress, {
+				toValue: 1,
+				duration: 2000,
+				easing: Easing.linear,
+				useNativeDriver: true,
+			}).start();
+		}, 7000);
+	}, []);
 
 	const renderButton = ({
 		item,
@@ -60,8 +72,7 @@ export default function HomeScreen() {
 				<StatusBar style="light" />
 				<LottieView
 					source={require("../../assets/animations/home.json")}
-					autoPlay
-					loop={false}
+					progress={lottieProgress}
 					style={styles.animation}
 				/>
 				<SafeAreaView style={{ flex: 1 }}>
