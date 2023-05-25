@@ -30,12 +30,8 @@ const myScheduleNotification = async (
 		(notification) => notification.content.body === body
 	);
 
-	if (isDuplicate) {
-		console.log("Notification already scheduled with the same content.");
-		return;
-	}
+	if (isDuplicate) return;
 
-	console.log("Scheduling notification for", date, "with title", title);
 	const triggerDate: any = new Date(date);
 	const now: any = new Date();
 	const seconds = Math.floor((triggerDate - now) / 1000); // Calculate the number of seconds between current time and the specified date
@@ -328,8 +324,7 @@ export default function ProgramCard({ data }: Props) {
 										"Ne maquez pas cette session !",
 										`La session '${data.title}' commence dans 10 minutes`,
 										moment(
-											// `${data.date} ${data.startTime}`,
-											`2023-05-25 00:50`,
+											`${data.date} ${data.startTime}`,
 											"YYYY-MM-DD HH:mm"
 										)
 											.subtract(10, "minutes")

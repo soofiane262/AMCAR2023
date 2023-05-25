@@ -72,25 +72,25 @@ export default function HomeScreen() {
 						>
 							<View style={{ height: 20 }} />
 							<View style={styles.center}>
-								{renderButton({
-									item: HomeButtons[0],
-									buttonSize: "xl",
-								})}
+								<View style={styles.row}>
+									{renderButton({
+										item: HomeButtons[0],
+										buttonSize: "lg",
+									})}
+									{renderButton({
+										item: HomeButtons[1],
+										buttonSize: "lg",
+									})}
+								</View>
 								{today >= "2023-06-08" &&
 									renderButton({
 										item: HomeButtons[12],
 										buttonSize: "xl",
 									})}
-								<View style={styles.row}>
-									{renderButton({
-										item: HomeButtons[1],
-										buttonSize: "lg",
-									})}
-									{renderButton({
-										item: HomeButtons[2],
-										buttonSize: "lg",
-									})}
-								</View>
+								{/* {renderButton({
+									item: HomeButtons[2],
+									buttonSize: "xl",
+								})} */}
 								<View style={styles.row}>
 									{renderButton({
 										item: HomeButtons[3],

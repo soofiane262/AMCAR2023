@@ -33,19 +33,13 @@ export default function SplashScreen({ onLoadedChange }: Props) {
 		}).start();
 	};
 
-	// useEffect(() => {
-	// 	if (fontsLoaded && animationFinished) handleAnimationFinish();
-	// }, [fontsLoaded, animationFinished]);
-
 	useEffect(() => {
-		setTimeout(() => {
-			Animated.timing(lottieProgress, {
-				toValue: 1,
-				duration: 6000,
-				easing: Easing.linear,
-				useNativeDriver: true,
-			}).start(() => handleAnimationFinish());
-		}, 2000);
+		Animated.timing(lottieProgress, {
+			toValue: 1,
+			duration: 6000,
+			easing: Easing.linear,
+			useNativeDriver: true,
+		}).start(() => handleAnimationFinish());
 	}, []);
 
 	return (

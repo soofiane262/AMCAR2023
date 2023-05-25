@@ -13,8 +13,10 @@ import QuestionScreen from "./src/screens/Question";
 import ProgramNew from "./src/screens/ProgramNew";
 import ChairmanScreen from "./src/screens/Chairman";
 import SpeakersScreen from "./src/screens/Speakers";
+import ModeratorsScreen from "./src/screens/Moderators";
 import CommitteeScreen from "./src/screens/Committee";
 import SponsorsScreen from "./src/screens/Sponsors";
+import InfosScreen from "./src/screens/Infos";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +42,8 @@ export default function App() {
 		StorageModifiers.setCategories();
 		StorageModifiers.setSpeech();
 		StorageModifiers.setSponsors();
+		StorageModifiers.setSpeakers();
+		StorageModifiers.setModerators();
 		const getPerm = async () => {
 			const { status } = await Notifications.getPermissionsAsync();
 			if (status !== "granted") {
@@ -98,6 +102,13 @@ export default function App() {
 					}}
 				/>
 				<Stack.Screen
+					name="Moderators"
+					component={ModeratorsScreen}
+					options={{
+						title: "Modérateurs",
+					}}
+				/>
+				<Stack.Screen
 					name="Committee"
 					component={CommitteeScreen}
 					options={{
@@ -109,6 +120,13 @@ export default function App() {
 					component={SponsorsScreen}
 					options={{
 						title: "Sponsors",
+					}}
+				/>
+				<Stack.Screen
+					name="Infos"
+					component={InfosScreen}
+					options={{
+						title: "Informations",
 					}}
 				/>
 			</Stack.Navigator>

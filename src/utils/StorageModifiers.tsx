@@ -4,6 +4,7 @@ import Speech from "../constants/Speech";
 import Program from "../constants/ProgramNew";
 import Sponsors from "../constants/Sponsors";
 import Speakers from "../constants/Speakers";
+import Moderators from "../constants/Moderators";
 import axios from "axios";
 
 export const getCategories = async () => {
@@ -167,5 +168,41 @@ export const setSpeakers = async () => {
 		await AsyncStorage.setItem("speakers", JSON.stringify(speakers));
 	} catch (error) {
 		console.error("Error setting speakers in storage:", error);
+	}
+};
+
+export const getModerators = async () => {
+	try {
+		const moderators = await AsyncStorage.getItem("moderators");
+		if (
+			moderators !== null &&
+			moderators !== undefined &&
+			moderators !== "[]"
+		) {
+			return JSON.parse(moderators);
+		}
+	} catch (e) {
+		console.error("Error retrieving moderators from storage:", e);
+	}
+	return Moderators;
+};
+
+export const setModerators = async () => {
+	try {
+		const response = await axios.get(
+			"https://sel-mars.com/amcar/moderators.json",
+			{
+				// query URL without using browser cache
+				headers: {
+					"Cache-Control": "no-cache",
+					Pragma: "no-cache",
+					Expires: "0",
+				},
+			}
+		);
+		const moderators = response.data;
+		await AsyncStorage.setItem("moderators", JSON.stringify(moderators));
+	} catch (error) {
+		console.error("Error setting moderators in storage:", error);
 	}
 };

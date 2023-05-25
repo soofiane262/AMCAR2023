@@ -1103,10 +1103,8 @@
 			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:15",
-
 			"endTime": "11:30",
 			"color": "blue",
-
 			"title": "Prise en charge des syndromes du QT long",
 			"speakers": [
 				{
@@ -1120,7 +1118,6 @@
 			"date": "2023-06-10",
 			"time": true,
 			"startTime": "11:30",
-
 			"endTime": "11:45",
 			"color": "blue",
 			"title": "Prise en charge des troubles du rythme après IDM",
