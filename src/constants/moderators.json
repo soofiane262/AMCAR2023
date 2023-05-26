@@ -1,11 +1,11 @@
 [
 	{
-		"name": "M. Cherti",
+		"name": "Z. Touati",
 		"city": "Rabat",
 		"keynotes": [
 			{
 				"title": "Session Cardiologie Structurelle",
-				"dateTime": "Jeudi 08 à 17:10"
+				"dateTime": "Jeudi 08 à 17:15"
 			}
 		]
 	},
@@ -15,7 +15,7 @@
 		"keynotes": [
 			{
 				"title": "Session Cardiologie Structurelle",
-				"dateTime": "Jeudi 08 à 17:10"
+				"dateTime": "Jeudi 08 à 17:15"
 			}
 		]
 	},
@@ -25,7 +25,7 @@
 		"keynotes": [
 			{
 				"title": "Session Cardiologie Structurelle",
-				"dateTime": "Jeudi 08 à 17:10"
+				"dateTime": "Jeudi 08 à 17:15"
 			}
 		]
 	},
@@ -35,7 +35,7 @@
 		"keynotes": [
 			{
 				"title": "Session Cardiologie Structurelle",
-				"dateTime": "Jeudi 08 à 17:10"
+				"dateTime": "Jeudi 08 à 17:15"
 			}
 		]
 	},
@@ -80,6 +80,16 @@
 		]
 	},
 	{
+		"name": "Z. Raissouni",
+		"city": "Tanger",
+		"keynotes": [
+			{
+				"title": "Session Cardiomyopathies",
+				"dateTime": "Vendredi 09 à 08:30"
+			}
+		]
+	},
+	{
 		"name": "S. Fadouach",
 		"city": "Marrakech",
 		"keynotes": [
@@ -90,7 +100,7 @@
 		]
 	},
 	{
-		"name": "S. Zaïmi",
+		"name": "S. Zaimi",
 		"city": "Casablanca",
 		"keynotes": [
 			{
@@ -130,8 +140,8 @@
 		]
 	},
 	{
-		"name": "A. Bouzerda",
-		"city": "Marakech",
+		"name": "S. Bensafiddine",
+		"city": "Casablanca",
 		"keynotes": [
 			{
 				"title": "Session Coronaires",
@@ -140,7 +150,7 @@
 		]
 	},
 	{
-		"name": "N. Ouafi",
+		"name": "N. El Ouafi",
 		"city": "Oujda",
 		"keynotes": [
 			{
@@ -200,7 +210,7 @@
 		]
 	},
 	{
-		"name": "S. Chraïbi",
+		"name": "S. Chraibi",
 		"city": "Casablanca",
 		"keynotes": [
 			{
@@ -244,7 +254,7 @@
 		]
 	},
 	{
-		"name": "N. Chraïbi",
+		"name": "N. Chraibi",
 		"city": "Casablanca",
 		"keynotes": [
 			{
@@ -274,6 +284,16 @@
 		]
 	},
 	{
+		"name": "S. Abdellali",
+		"city": "Rabat",
+		"keynotes": [
+			{
+				"title": "Session Rythmologie",
+				"dateTime": "Samedi 10 à 11:00"
+			}
+		]
+	},
+	{
 		"name": "A. Kane",
 		"city": "Dakar",
 		"keynotes": [
@@ -284,7 +304,7 @@
 		]
 	},
 	{
-		"name": "A. Chaib",
+		"name": "H. Bouzelmat",
 		"city": "Rabat",
 		"keynotes": [
 			{

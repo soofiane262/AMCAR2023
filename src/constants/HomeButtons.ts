@@ -25,7 +25,7 @@ export const HomeButtons: HomeButtonData[] = [
 	{
 		id: "Map",
 		title: "Plan Interactif",
-		icon: "milestone",
+		icon: "git-branch",
 		color: Colors.secondary,
 	},
 	{
@@ -38,14 +38,13 @@ export const HomeButtons: HomeButtonData[] = [
 		id: "Speakers",
 		title: "Orateurs",
 		iconFamily: "Ionicons",
-		icon: "md-mic-outline",
+		icon: "mic-outline",
 		color: Colors.secondary,
 	},
 	{
 		id: "Moderators",
 		title: "Modérateurs",
-		iconFamily: "Ionicons",
-		icon: "md-chatbubbles-outline",
+		icon: "comment-discussion",
 		color: Colors.secondary,
 	},
 	{

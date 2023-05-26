@@ -93,15 +93,18 @@ export default function HomeScreen() {
 										buttonSize: "lg",
 									})}
 								</View>
-								{today >= "2023-06-08" &&
-									renderButton({
-										item: HomeButtons[12],
-										buttonSize: "xl",
-									})}
-								{/* {renderButton({
-									item: HomeButtons[2],
-									buttonSize: "xl",
-								})} */}
+								{today >= "2023-05-08" && (
+									<View style={styles.row}>
+										{renderButton({
+											item: HomeButtons[2],
+											buttonSize: "lg",
+										})}
+										{renderButton({
+											item: HomeButtons[12],
+											buttonSize: "lg",
+										})}
+									</View>
+								)}
 								<View style={styles.row}>
 									{renderButton({
 										item: HomeButtons[3],

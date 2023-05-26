@@ -338,11 +338,11 @@
 			"startTime": "08:50",
 			"endTime": "09:05",
 			"color": "blue",
-			"title": "L'IRM dans les myocardiopathies",
+			"title": "CMH : Diagnostic étiologique et pronostic ?",
 			"speakers": [
 				{
-					"name": "N. Doghmi",
-					"city": "Rabat"
+					"name": "M. C. Malergue",
+					"city": "Paris"
 				}
 			]
 		},
@@ -363,11 +363,11 @@
 			"startTime": "09:10",
 			"endTime": "09:25",
 			"color": "blue",
-			"title": "CMH : Diagnostic étiologique et pronostic ?",
+			"title": "L'IRM dans les myocardiopathies",
 			"speakers": [
 				{
-					"name": "M. C. Malergue",
-					"city": "Paris"
+					"name": "N. Doghmi",
+					"city": "Rabat"
 				}
 			]
 		},
@@ -643,7 +643,7 @@
 					"city": "Marakech"
 				},
 				{
-					"name": "N. Ouafi",
+					"name": "N. El Ouafi",
 					"city": "Oujda"
 				},
 				{
@@ -1195,11 +1195,11 @@
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
-			"title": "Salle 1 • Quiz ECG",
+			"title": "Salle 1 • Le cathétérisme droit",
 			"speakers": [
 				{
-					"name": "A. Moustaghfir",
-					"city": "Casablanca"
+					"name": "M. Z. Jalal",
+					"city": "Bordeaux"
 				}
 			]
 		},
@@ -1209,11 +1209,11 @@
 			"startTime": "13:00",
 			"endTime": "14:30",
 			"color": "blue",
-			"title": "Salle 2 • Le cathétérisme droit",
+			"title": "Salle 2 • Quiz ECG",
 			"speakers": [
 				{
-					"name": "M. Z. Jalal",
-					"city": "Bordeaux"
+					"name": "A. Moustaghfir",
+					"city": "Casablanca"
 				}
 			]
 		},
@@ -1472,7 +1472,9 @@
 			"endTime": "19:45",
 			"icon": "medal",
 			"color": "red",
-			"title": "Remise des Prix"
+			"title": "Remise des prix AMCAR et prix HTAP",
+			"laboratory": "Janssen",
+			"image": "https://sel-mars.com/amcar/images/sponsors/janssen.png"
 		},
 		{
 			"id": 101,

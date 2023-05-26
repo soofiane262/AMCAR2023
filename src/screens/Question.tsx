@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import Colors from "../constants/Colors";
 import LottieView from "lottie-react-native";

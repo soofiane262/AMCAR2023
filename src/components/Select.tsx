@@ -12,7 +12,8 @@ interface Props {
 	value?: string;
 	onChangeText: (text: string) => void;
 	dropdownData: string[];
-	icon: any;
+	icon?: any;
+	style?: any;
 }
 
 const Select: React.FC<Props> = ({
@@ -21,13 +22,22 @@ const Select: React.FC<Props> = ({
 	value,
 	dropdownData,
 	icon,
+	style,
 }) => {
 	const [color, setColor] = React.useState(Colors.quartary);
 	if (!value) {
 		onChangeText(defaultValue);
 	}
 	return (
-		<View style={[styles.container, { borderColor: color }]}>
+		<View
+			style={[
+				styles.container,
+				{
+					borderColor: color,
+					...style,
+				},
+			]}
+		>
 			<ModalDropdown
 				options={dropdownData}
 				onSelect={(index, value) => onChangeText(value)}
@@ -40,11 +50,13 @@ const Select: React.FC<Props> = ({
 				defaultValue={defaultValue}
 			>
 				<View style={styles.inner}>
-					<Ionicons
-						name={icon}
-						size={20}
-						style={[styles.icon, { color }]}
-					/>
+					{icon && (
+						<Ionicons
+							name={icon}
+							size={20}
+							style={[styles.icon, { color }]}
+						/>
+					)}
 					<StyledText.Medium style={styles.input}>
 						{value}
 					</StyledText.Medium>

@@ -46,13 +46,68 @@ $sql = "INSERT INTO questions (question, question_date) VALUES (?, ?)";
 ($stmt->bind_param('ss', $question, $question_date)) or trigger_error($stmt->error, E_USER_ERROR);
 # Execute stmt or reports errors
 ($stmt->execute()) or trigger_error($stmt->error, E_USER_ERROR);
-# Close stmt
-$stmt->close();
+// # Close stmt
+// $stmt->close();
 
-// Data inserted successfully
-echo json_encode(['status' => 'success', 'title' => 'Merci !', 'message' => 'Nous vous remercions pour votre question. Nous y répondrons dans la prochaine session discussion.']);
+// -------------------------------------------------------------------------------------------------------------
 
-// Close the database connection
-$conn->close();
+// Check if the data was inserted successfully
+if ($stmt->affected_rows > 0) {
+	// Data inserted successfully
+	
+	# Close stmt
+	$stmt->close();
+    // Close the database connection
+    $conn->close();
+
+    // Prepare the data for the second API
+    $postData = array(
+        'enonceQ' => $question
+    );
+
+    // Set the URL of the second API
+    $url = 'https://amcar.ma/QuestionAMCAR/src/envoyerQuestion.php';
+
+    // Initialize cURL
+    $curl = curl_init($url);
+
+    // Set the cURL options
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+    // Execute the cURL request
+    $response = curl_exec($curl);
+
+    // Check for errors
+    if (curl_errno($curl)) {
+        echo json_encode(['status' => 'error', 'title' => 'Erreur 01', 'message' => 'Une erreur s\'est produite lors de l\'appel à la deuxième API']);
+    } else {
+        // Check the response from the second API
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        if ($httpCode === 200) {
+            echo json_encode(['status' => 'success', 'title' => 'Merci !', 'message' => 'Nous vous remercions pour votre question. Nous y répondrons dans la prochaine session discussion.']);
+        } else {
+            echo json_encode(['status' => 'error', 'title' => 'Erreur 02', 'message' => 'Une erreur s\'est produite lors de l\'appel à la deuxième API']);
+        }
+    }
+
+    // Close cURL
+    curl_close($curl);
+} else {
+    // Error occurred while inserting data into the first table
+    echo json_encode(['status' => 'error', 'title' => 'Erreur', 'message' => 'Une erreur s\'est produite lors de l\'insertion des données']);
+    // Close the database connection
+    $conn->close();
+}
+
+
+// -------------------------------------------------------------------------------------------------------------
+
+// // Data inserted successfully
+// echo json_encode(['status' => 'success', 'title' => 'Merci !', 'message' => 'Nous vous remercions pour votre question. Nous y répondrons dans la prochaine session discussion.']);
+
+// // Close the database connection
+// $conn->close();
 
 ?>

@@ -86,7 +86,7 @@ export default function QuestionForm() {
 				status: "error",
 				title: "Erreur",
 				message:
-					"Nous sommes désolés, une erreur s'est produite lors de l'inscription. Veuillez réessayer ultérieurement.",
+					"Nous sommes désolés, une erreur s'est produite. Veuillez réessayer ultérieurement.",
 			};
 		}
 	};

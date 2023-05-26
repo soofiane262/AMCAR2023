@@ -106,21 +106,21 @@
 		]
 	},
 	{
-		"name": "N. Doghmi",
-		"city": "Rabat",
-		"keynotes": [
-			{
-				"title": "L'IRM dans les myocardiopathies",
-				"dateTime": "Vendredi 09 à 08:50"
-			}
-		]
-	},
-	{
 		"name": "M. C. Malergue",
 		"city": "Paris",
 		"keynotes": [
 			{
 				"title": "CMH : Diagnostic étiologique et pronostic ?",
+				"dateTime": "Vendredi 09 à 08:50"
+			}
+		]
+	},
+	{
+		"name": "N. Doghmi",
+		"city": "Rabat",
+		"keynotes": [
+			{
+				"title": "L'IRM dans les myocardiopathies",
 				"dateTime": "Vendredi 09 à 09:10"
 			}
 		]
@@ -293,7 +293,7 @@
 			},
 			{
 				"title": "Evaluation de la valve tricuspide avant le Triclip",
-				"dateTime": "Vendredi 09 à 17:15"
+				"dateTime": "Samedi 10 à 17:15"
 			}
 		]
 	},
@@ -340,6 +340,10 @@
 		"city": "Casablanca",
 		"keynotes": [
 			{
+				"title": "Actualités dans la gestion des dyslipidèmies en post SCA",
+				"dateTime": "Jeudi 08 à 18:30"
+			},
+			{
 				"title": "AOD et situations difficiles",
 				"dateTime": "Samedi 10 à 08:30"
 			}
@@ -351,7 +355,7 @@
 		"keynotes": [
 			{
 				"title": "Gestion du traitement anti-thrombotique en périopératoire",
-				"dateTime": "Samedi 10 à 08:50"
+				"dateTime": "Samedi 10 à 09:10"
 			}
 		]
 	},

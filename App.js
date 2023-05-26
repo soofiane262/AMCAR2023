@@ -9,8 +9,9 @@ import * as Notifications from "expo-notifications";
 
 import HomeScreen from "./src/screens/Home";
 import EnrollScreen from "./src/screens/Enroll";
-import QuestionScreen from "./src/screens/Question";
 import ProgramNew from "./src/screens/ProgramNew";
+import MapScreen from "./src/screens/Map";
+import QuestionScreen from "./src/screens/Question";
 import ChairmanScreen from "./src/screens/Chairman";
 import SpeakersScreen from "./src/screens/Speakers";
 import ModeratorsScreen from "./src/screens/Moderators";
@@ -76,16 +77,23 @@ export default function App() {
 					options={{ title: "Inscription" }}
 				/>
 				<Stack.Screen
+					name="Program"
+					component={ProgramNew}
+					options={{ title: "Programme" }}
+				/>
+				<Stack.Screen
+					name="Map"
+					component={MapScreen}
+					options={{
+						title: "Plan Intéractif",
+					}}
+				/>
+				<Stack.Screen
 					name="Question"
 					component={QuestionScreen}
 					options={{
 						title: "Posez vos questions",
 					}}
-				/>
-				<Stack.Screen
-					name="Program"
-					component={ProgramNew}
-					options={{ title: "Programme" }}
 				/>
 				<Stack.Screen
 					name="Chairman"
@@ -131,13 +139,5 @@ export default function App() {
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
-		// <>
-		// 	{!loaded && <SplashScreen fontsLoaded={fontsLoaded} onLoadedChange={setLoaded} />}
-		// 	{loaded &&
-		// 		<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-		// 			<StyledText.Bold>Hi</StyledText.Bold>
-		// 		</View>}
-		// 	{/* {loaded && <RootLayoutNav />} */}
-		// </>
 	);
 }
