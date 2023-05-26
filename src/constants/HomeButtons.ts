@@ -23,9 +23,9 @@ export const HomeButtons: HomeButtonData[] = [
 		color: Colors.secondary,
 	},
 	{
-		id: "Map",
-		title: "Plan Interactif",
-		icon: "git-branch",
+		id: "Question",
+		title: "Posez vos Questions",
+		icon: "question",
 		color: Colors.secondary,
 	},
 	{
@@ -87,11 +87,5 @@ export const HomeButtons: HomeButtonData[] = [
 		icon: "globe",
 		color: Colors.secondary,
 		href: "https://new.amcar.ma/",
-	},
-	{
-		id: "Question",
-		title: "Posez vos Questions",
-		icon: "question",
-		color: Colors.secondary,
 	},
 ];

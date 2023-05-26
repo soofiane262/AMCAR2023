@@ -35,7 +35,7 @@ export default function SplashScreen({ onLoadedChange }: Props) {
 	useEffect(() => {
 		Animated.timing(lottieProgress, {
 			toValue: 1,
-			duration: 6000,
+			duration: 4000,
 			easing: Easing.linear,
 			useNativeDriver: true,
 		}).start(() => handleAnimationFinish());

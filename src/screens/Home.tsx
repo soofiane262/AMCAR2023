@@ -40,7 +40,7 @@ export default function HomeScreen() {
 				easing: Easing.linear,
 				useNativeDriver: true,
 			}).start();
-		}, 7000);
+		}, 5000);
 	}, []);
 
 	const renderButton = ({
@@ -93,18 +93,11 @@ export default function HomeScreen() {
 										buttonSize: "lg",
 									})}
 								</View>
-								{today >= "2023-05-08" && (
-									<View style={styles.row}>
-										{renderButton({
-											item: HomeButtons[2],
-											buttonSize: "lg",
-										})}
-										{renderButton({
-											item: HomeButtons[12],
-											buttonSize: "lg",
-										})}
-									</View>
-								)}
+								{moment(today).isSameOrAfter("2023-06-07") &&
+									renderButton({
+										item: HomeButtons[2],
+										buttonSize: "xl",
+									})}
 								<View style={styles.row}>
 									{renderButton({
 										item: HomeButtons[3],

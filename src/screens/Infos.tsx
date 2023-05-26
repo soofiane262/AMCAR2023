@@ -89,8 +89,8 @@ export default function InfosScreen() {
 					<TouchableOpacity
 						onPress={() =>
 							Platform.OS !== "android"
-								? Linking.openURL(`telprompt:{00212641699757}`)
-								: Linking.openURL(`tel:{00212641699757}`).catch(
+								? Linking.openURL(`telprompt:${+212641699757}`)
+								: Linking.openURL(`tel:${+212641699757}`).catch(
 										(err) =>
 											console.error(
 												"An error occurred",
@@ -260,8 +260,8 @@ export default function InfosScreen() {
 					<TouchableOpacity
 						onPress={() =>
 							Platform.OS !== "android"
-								? Linking.openURL(`telprompt:{00212522209096}`)
-								: Linking.openURL(`tel:{00212522209096}`).catch(
+								? Linking.openURL(`telprompt:${+212522209096}`)
+								: Linking.openURL(`tel:${+212522209096}`).catch(
 										(err) =>
 											console.error(
 												"An error occurred",
@@ -310,8 +310,8 @@ export default function InfosScreen() {
 					<TouchableOpacity
 						onPress={() =>
 							Platform.OS !== "android"
-								? Linking.openURL(`telprompt:{00212661799199}`)
-								: Linking.openURL(`tel:{00212661799199}`).catch(
+								? Linking.openURL(`telprompt:${+212661799199}`)
+								: Linking.openURL(`tel:${+212661799199}`).catch(
 										(err) =>
 											console.error(
 												"An error occurred",
@@ -391,8 +391,8 @@ export default function InfosScreen() {
 					<TouchableOpacity
 						onPress={() =>
 							Platform.OS !== "android"
-								? Linking.openURL(`telprompt:{00212661455837}`)
-								: Linking.openURL(`tel:{00212661455837}`).catch(
+								? Linking.openURL(`telprompt:${+212661455837}`)
+								: Linking.openURL(`tel:${+212661455837}`).catch(
 										(err) =>
 											console.error(
 												"An error occurred",

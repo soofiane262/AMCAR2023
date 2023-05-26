@@ -57,13 +57,17 @@ export default function ProgramNew() {
 
 			const nearestSession = ongoingSession || nextSession;
 
-			if (nearestSession) {
+			if (
+				moment(today).isSameOrAfter(startDate) &&
+				moment(today).isSameOrBefore(endDate) &&
+				nearestSession
+			) {
 				const index = program[dayIdx].indexOf(nearestSession);
 				flatListRef[dayIdx].current?.scrollToIndex({ index });
 			}
 			setTimeout(() => {
 				setModalVisible(false);
-			}, 1000 + 1000 * dayIdx);
+			}, 1000 * (dayIdx + 1));
 		};
 		if (program.length === 0) loadProgram();
 		else initScreen();
