@@ -398,7 +398,7 @@ export default function EnrollForm() {
 						>
 							<View style={{ flex: 1 }}>
 								<StyledText.SemiBold style={styles.inputLabel}>
-									Newsletter
+									Recevez-vous les e-mails du groupe AMCAR ?
 								</StyledText.SemiBold>
 							</View>
 							<Switch
@@ -409,15 +409,6 @@ export default function EnrollForm() {
 						</TouchableOpacity>
 					)}
 				/>
-				<StyledText.Medium
-					style={{
-						color: Colors.tertiary,
-						fontSize: 14,
-						padding: 10,
-					}}
-				>
-					J'accepte de recevoir les e-mails du groupe AMCAR
-				</StyledText.Medium>
 				<StyledText.Medium style={styles.error}>
 					{errors.newsletter ? errors.newsletter.message : ""}
 				</StyledText.Medium>

@@ -76,7 +76,7 @@ export default function HomeScreen() {
 					style={styles.animation}
 				/>
 				<SafeAreaView style={{ flex: 1 }}>
-					<View style={styles.container}>
+					<View style={[styles.container]}>
 						<ScrollView
 							showsVerticalScrollIndicator={false}
 							style={{ flex: 1 }}
@@ -93,11 +93,16 @@ export default function HomeScreen() {
 										buttonSize: "lg",
 									})}
 								</View>
-								{moment(today).isSameOrAfter("2023-06-07") &&
-									renderButton({
+								<View style={styles.row}>
+									{renderButton({
 										item: HomeButtons[2],
-										buttonSize: "xl",
+										buttonSize: "lg",
 									})}
+									{renderButton({
+										item: HomeButtons[12],
+										buttonSize: "lg",
+									})}
+								</View>
 								<View style={styles.row}>
 									{renderButton({
 										item: HomeButtons[3],

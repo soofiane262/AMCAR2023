@@ -88,4 +88,10 @@ export const HomeButtons: HomeButtonData[] = [
 		color: Colors.secondary,
 		href: "https://new.amcar.ma/",
 	},
+	{
+		id: "Map",
+		title: "Plan du site",
+		icon: "git-pull-request",
+		color: Colors.secondary,
+	},
 ];

@@ -15,36 +15,8 @@ import { ProgramData } from "../constants/ProgramNew";
 import Colors from "../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import moment from "moment-timezone";
-import * as Notifications from "expo-notifications";
 import LottieView from "lottie-react-native";
-
-const myScheduleNotification = async (
-	title: string,
-	body: string,
-	date: Date
-) => {
-	const existingNotifications =
-		await Notifications.getAllScheduledNotificationsAsync();
-
-	const isDuplicate = existingNotifications.some(
-		(notification) => notification.content.body === body
-	);
-
-	if (isDuplicate) return;
-
-	const triggerDate: any = new Date(date);
-	const now: any = new Date();
-	const seconds = Math.floor((triggerDate - now) / 1000); // Calculate the number of seconds between current time and the specified date
-
-	await Notifications.scheduleNotificationAsync({
-		content: {
-			title: title,
-			body: body,
-			data: { data: "goes here" },
-		},
-		trigger: { seconds: seconds },
-	});
-};
+import myScheduleNotification from "../utils/NotificationHandler";
 
 interface TimeProps {
 	time: string;

@@ -11,6 +11,7 @@ import HomeScreen from "./src/screens/Home";
 import EnrollScreen from "./src/screens/Enroll";
 import ProgramNew from "./src/screens/ProgramNew";
 import QuestionScreen from "./src/screens/Question";
+import MapScreen from "./src/screens/Map";
 import ChairmanScreen from "./src/screens/Chairman";
 import SpeakersScreen from "./src/screens/Speakers";
 import ModeratorsScreen from "./src/screens/Moderators";
@@ -85,6 +86,13 @@ export default function App() {
 					component={QuestionScreen}
 					options={{
 						title: "Posez vos questions",
+					}}
+				/>
+				<Stack.Screen
+					name="Map"
+					component={MapScreen}
+					options={{
+						title: "Plan du site",
 					}}
 				/>
 				<Stack.Screen
