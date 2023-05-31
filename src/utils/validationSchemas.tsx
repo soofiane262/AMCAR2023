@@ -24,11 +24,20 @@ export const enrollValidationSchema = z.object({
 		required_error: "Veuillez sélectionner votre secteur",
 	}),
 	place: z
-		.string({ required_error: "Veuillez entrer votre lieu d'exercice" })
-		.min(3, { message: "Veuillez entrer votre lieu d'exercice" }),
+		.string({
+			required_error: "Veuillez sélectionner votre lieu d'exercice",
+		})
+		.nonempty({ message: "Veuillez sélectionner votre lieu d'exercice" }),
 	city: z
-		.string({ required_error: "Veuillez entrer votre ville" })
-		.min(3, { message: "Veuillez entrer votre ville" }),
+		.string({
+			required_error: "Veuillez sélectionner votre ville",
+		})
+		.nonempty({ message: "Veuillez sélectionner votre ville" }),
+	country: z
+		.string({
+			required_error: "Veuillez sélectionner votre pays",
+		})
+		.nonempty({ message: "Veuillez sélectionner votre pays" }),
 	newsletter: z.string({
 		required_error: "Veuillez sélectionner une option",
 	}),

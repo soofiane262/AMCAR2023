@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "AMCAR 30° JN",
 		"slug": "AMCAR2023",
-		"version": "1.5.0",
+		"version": "1.6.0",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
 		"userInterfaceStyle": "dark",
@@ -17,7 +17,7 @@
 			"bundleIdentifier": "com.amcar.jn30"
 		},
 		"android": {
-			"versionCode": 5,
+			"versionCode": 6,
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#000000"

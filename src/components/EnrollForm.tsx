@@ -5,7 +5,6 @@ import {
 	EnrollFormData,
 } from "../utils/validationSchemas";
 import RadioWithText from "./RadioWithText";
-import { getCategories } from "../utils/StorageModifiers";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import {
@@ -22,14 +21,17 @@ import * as StyledText from "./StyledText";
 import InputWithIcon from "./InputWithIcon";
 import Select from "./Select";
 import LottieView from "lottie-react-native";
-import { Switch } from "react-native-paper";
 import { useNavigation } from "@react-navigation/core";
+
+import Categories from "../constants/Categories";
+import Centres from "../constants/Centres";
+import Cities from "../constants/Cities";
+import Countries from "../constants/Countries";
 
 const API_URL = "https://sel-mars.com/amcar/api/enroll.php";
 
 export default function EnrollForm() {
 	const navigation = useNavigation();
-	const [categoriesData, setCategoriesData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [modalVisible, setModalVisible] = useState(false);
 	const [modalTitle, setModalTitle] = useState("");
@@ -42,12 +44,6 @@ export default function EnrollForm() {
 
 	useEffect(() => {
 		control._reset();
-		setLoading(false);
-		const loadCategories = async () => {
-			const dataCategories = await getCategories();
-			setCategoriesData(dataCategories);
-		};
-		loadCategories();
 	}, []);
 
 	const {
@@ -265,7 +261,7 @@ export default function EnrollForm() {
 							onChangeText={onChange}
 							defaultValue={"Cardiologue"}
 							value={value}
-							dropdownData={categoriesData}
+							dropdownData={Categories}
 							icon="fitness"
 						/>
 					)}
@@ -344,14 +340,11 @@ export default function EnrollForm() {
 					name="place"
 					rules={{ required: true }}
 					render={({ field: { onChange, onBlur, value } }) => (
-						<InputWithIcon
-							control={control}
-							fieldName="place"
-							error={errors.place ? true : false}
-							placeholder="eg. CHU Ibno Rochd"
-							onBlur={onBlur}
+						<Select
 							onChangeText={onChange}
+							defaultValue={""}
 							value={value}
+							dropdownData={Centres}
 							icon="medkit"
 						/>
 					)}
@@ -368,20 +361,39 @@ export default function EnrollForm() {
 					name="city"
 					rules={{ required: true }}
 					render={({ field: { onChange, onBlur, value } }) => (
-						<InputWithIcon
-							control={control}
-							fieldName="city"
-							error={errors.city ? true : false}
-							placeholder="eg. Casablanca"
-							onBlur={onBlur}
+						<Select
 							onChangeText={onChange}
+							defaultValue={""}
 							value={value}
+							dropdownData={Cities}
 							icon="map"
 						/>
 					)}
 				/>
 				<StyledText.Medium style={styles.error}>
 					{errors.city ? errors.city.message : ""}
+				</StyledText.Medium>
+
+				<StyledText.SemiBold style={styles.inputLabel}>
+					Pays
+				</StyledText.SemiBold>
+				<Controller
+					control={control}
+					name="country"
+					rules={{ required: true }}
+					defaultValue="Maroc"
+					render={({ field: { onChange, onBlur, value } }) => (
+						<Select
+							onChangeText={onChange}
+							defaultValue={"Maroc"}
+							value={value}
+							dropdownData={Countries}
+							icon="map"
+						/>
+					)}
+				/>
+				<StyledText.Medium style={styles.error}>
+					{errors.country ? errors.country.message : ""}
 				</StyledText.Medium>
 
 				<View

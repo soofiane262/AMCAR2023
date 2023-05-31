@@ -40,12 +40,12 @@ if ($continue and !empty($event)) {
 		echo ("success");
 }
 
-// if ($continue) {
-// 	$newWatcherId = $add->addNewSubscription($nomPrenom, $email, $event->ID, $idSpecialite, $idSecteur, $idVille, $idPays, $statut, $idCentreExercice, $newsletter, $telephone, $conjoint);
-// 	if (!empty($newWatcherId)) {
-// 		echo ("success");
-// 	} else {
-// 		echo ("error 4");
-// 		$continue = false;
-// 	}
-// }
+if ($continue) {
+	$newWatcherId = $add->addNewSubscription($nomPrenom, $email, $event->ID, $idSpecialite, $idSecteur, $idVille, $idPays, $statut, $idCentreExercice, $newsletter, $telephone, $conjoint);
+	if (!empty($newWatcherId)) {
+		echo ("success");
+	} else {
+		echo ("error 4");
+		$continue = false;
+	}
+}
