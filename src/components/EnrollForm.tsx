@@ -384,31 +384,38 @@ export default function EnrollForm() {
 					{errors.city ? errors.city.message : ""}
 				</StyledText.Medium>
 
-				<Controller
-					control={control}
-					name="newsletter"
-					render={({ field: { onChange, onBlur, value } }) => (
-						<TouchableOpacity
-							onPress={() => onChange(!value)}
-							style={{
-								flexDirection: "row",
-								alignItems: "center",
-							}}
-							onBlur={onBlur}
-						>
-							<View style={{ flex: 1 }}>
-								<StyledText.SemiBold style={styles.inputLabel}>
-									Recevez-vous les e-mails du groupe AMCAR ?
-								</StyledText.SemiBold>
+				<View
+					style={{
+						width: "80%",
+						flexDirection: "row",
+						alignItems: "center",
+					}}
+				>
+					<StyledText.SemiBold
+						style={[styles.inputLabel, { width: "80%" }]}
+					>
+						Recevez-vous les e-mails du groupe AMCAR ?
+					</StyledText.SemiBold>
+					<Controller
+						control={control}
+						name="newsletter"
+						rules={{ required: true }}
+						render={({ field: { onChange, onBlur, value } }) => (
+							<View style={{ width: "40%" }}>
+								<RadioWithText
+									label="Oui"
+									value={value}
+									onChange={onChange}
+								/>
+								<RadioWithText
+									label="Non"
+									value={value}
+									onChange={onChange}
+								/>
 							</View>
-							<Switch
-								value={value}
-								color={Colors.primary}
-								onValueChange={() => onChange(!value)}
-							/>
-						</TouchableOpacity>
-					)}
-				/>
+						)}
+					/>
+				</View>
 				<StyledText.Medium style={styles.error}>
 					{errors.newsletter ? errors.newsletter.message : ""}
 				</StyledText.Medium>

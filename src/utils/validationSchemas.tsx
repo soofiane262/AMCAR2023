@@ -29,7 +29,9 @@ export const enrollValidationSchema = z.object({
 	city: z
 		.string({ required_error: "Veuillez entrer votre ville" })
 		.min(3, { message: "Veuillez entrer votre ville" }),
-	newsletter: z.boolean().default(false),
+	newsletter: z.string({
+		required_error: "Veuillez sélectionner une option",
+	}),
 });
 
 export type EnrollFormData = z.infer<typeof enrollValidationSchema>;

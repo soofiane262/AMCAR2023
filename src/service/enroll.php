@@ -36,6 +36,11 @@ $sector = $DecodedData['sector'];
 $place = $DecodedData['place'];
 $city = $DecodedData['city'];
 $newsletter = $DecodedData['newsletter'];
+if ($newsletter === true || $newsletter === "Oui") {
+	$newsletter = true;
+} else {
+	$newsletter = false;
+}
 $registration_date = new DateTime();
 $registration_date = $registration_date->format('Y-m-d H:i:s');
 $origin = 'app';
